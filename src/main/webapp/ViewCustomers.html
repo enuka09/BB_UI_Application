@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Customer Details</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .border-top {
+      border-top: 1px solid #ddd;
+    }
+
+    .border-bottom {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .border-left {
+      border-left: 1px solid #ddd;
+    }
+
+    .border-right {
+      border-right: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+<button id="idLoad" onclick="loadCustomer()">Load Customer</button>
+<br/><br/>
+<table>
+  <thead>
+  <tr class="border-bottom border-top">
+    <th class="border-right">ID</th>
+    <th class="border-right">First Name</th>
+    <th class="border-right">Last Name</th>
+    <th class="border-right">Username</th>
+    <th class="border-right">Password</th>
+    <th class="border-right">NIC</th>
+    <th class="border-right">Birth Date</th>
+  </tr>
+  </thead>
+  <tbody id="customerTable"></tbody>
+</table>
+
+<script>
+
+  const url = 'http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/customer';
+  const customerTable = document.getElementById('customerTable');
+
+  function loadCustomer(){
+    fetch(url)
+            .then(response => response.json())
+            .then(data => {
+              try {
+                customerTable.innerHTML = '';
+                data.forEach(customer => {
+                  customerTable.innerHTML += `
+                                <tr class="border-bottom">
+                                    <td class="border-right">${customer.id}</td>
+                                    <td class="border-right">${customer.firstName}</td>
+                                    <td class="border-right">${customer.lastName}</td>
+                                    <td class="border-right">${customer.username}</td>
+                                    <td class="border-right">${customer.password}</td>
+                                    <td class="border-right">${customer.nic}</td>
+                                    <td class="border-right">${customer.dob}</td>
+                                </tr>
+                            `;
+                });
+              } catch (error) {
+                console.error(error);
+              }
+            })
+            .catch(error => console.error(error));
+  }
+
+</script>
+
+</body>
+</html>
