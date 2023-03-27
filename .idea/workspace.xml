@@ -9,12 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e851a4e-5cb3-42c5-a897-88df6005fef9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view_customers.html" afterDir="false" />
+    <list default="true" id="8e851a4e-5cb3-42c5-a897-88df6005fef9" name="Changes" comment="feat: Add customer details view, customer login, and customer signup pages&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Customer_Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Customer_Signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/bg-login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/bg-signup.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Advanced Programming_CL.BSCSD.25.35_(st20267804).docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modifications" beforeDir="false" afterPath="$PROJECT_DIR$/Modifications" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view_customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view_customers.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -54,21 +61,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Bsc. (Hons) Computing and SE/Semester 01/Advanced Programming/BB_UI_Application&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/Bsc. (Hons) Computing and SE/Semester 01/Advanced Programming/BB_UI_Application",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Bsc. (Hons) Computing and SE\Semester 01\Advanced Programming\BB_UI_Application\src\main\webapp\Images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Bsc. (Hons) Computing and SE\Semester 01\Advanced Programming\BB_UI_Application\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="GlassFish 7.0.0" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.0" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/BumbleBeeLoanApplicationUI-1.0-SNAPSHOT" />
@@ -157,11 +174,25 @@
       <workItem from="1679822963747" duration="585000" />
       <workItem from="1679825211368" duration="963000" />
       <workItem from="1679834387181" duration="3579000" />
-      <workItem from="1679895702071" duration="529000" />
+      <workItem from="1679895702071" duration="30633000" />
+      <workItem from="1679928437936" duration="3816000" />
     </task>
+    <task id="LOCAL-00001" summary="Add functionality to load customer data from API endpoint">
+      <created>1679896522937</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679896522938</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add functionality to load customer data from API endpoint" />
+    <MESSAGE value="feat: Add customer details view, customer login, and customer signup pages&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add customer details view, customer login, and customer signup pages&quot;" />
   </component>
 </project>

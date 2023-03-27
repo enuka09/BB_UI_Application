@@ -3,3 +3,5 @@ Id   |  Date        |  Remark
 001  |  21/03/2023  |  Created the Initial Project
 002  |  21/03/2023  |  Add the project to the Git Repositories
 
+003  |  23/03/2023  |  Add the project to the Git Repositories
+003  |  23/03/2023  |  Added customer details form with a button to load customer details from a REST API endpoint using Fetch API in JavaScript.
