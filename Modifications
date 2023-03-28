@@ -6,5 +6,7 @@ Id   |  Date        |  Remark
 003  |  23/03/2023  |  Add the project to the Git Repositories
 004  |  23/03/2023  |  Added customer details form with a button to load customer details from a REST API endpoint using Fetch API in JavaScript.
 
-005  |  27/03/2023  |   Design Customer Signup and Customer Login Interfaces
-006  |  27/03/2023  |   Modified "ViewCustomers" html file in table format to display all the data from the database.
+005  |  27/03/2023  |  Design Customer Signup and Customer Login Interfaces
+006  |  27/03/2023  |  Modified "ViewCustomers" html file in table format to display all the data from the database.
+
+007  |  28/03/2023  |  Convert the Signup and Login html files to JSP as "UserRegistration.jsp" and "UserLogin.jsp"
