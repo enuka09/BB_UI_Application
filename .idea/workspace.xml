@@ -9,17 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e851a4e-5cb3-42c5-a897-88df6005fef9" name="Changes" comment="modif : Convert the CustomerRegistration and Login html files to JSP">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/AdminDashboard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/UserLogin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/adminstyle.css" afterDir="false" />
+    <list default="true" id="8e851a4e-5cb3-42c5-a897-88df6005fef9" name="Changes" comment="modif: convert signup and login html to jsp and created a servlet to retrieve registration data from the html">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/admin-profile.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Advanced Programming_CL.BSCSD.25.35_(st20267804).docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AdminDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AdminDashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/UserLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/UserRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserRegistration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminstyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +31,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
-        <option value="Jsp File" />
         <option value="CSS File" />
+        <option value="Jsp File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -73,7 +75,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Bsc. (Hons) Computing and SE/Semester 01/Advanced Programming/BB_UI_Application/src/main/webapp/Images",
+    "last_opened_file_path": "E:/Bsc. (Hons) Computing and SE/Semester 01/Advanced Programming/BB_UI_Application/src/main/webapp/Images/Products",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -88,6 +90,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Bsc. (Hons) Computing and SE\Semester 01\Advanced Programming\BB_UI_Application\src\main\webapp\Images\Products" />
       <recent name="E:\Bsc. (Hons) Computing and SE\Semester 01\Advanced Programming\BB_UI_Application\src\main\webapp\Images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -186,7 +189,7 @@
       <workItem from="1679825211368" duration="963000" />
       <workItem from="1679834387181" duration="3579000" />
       <workItem from="1679895702071" duration="30633000" />
-      <workItem from="1679928437936" duration="63082000" />
+      <workItem from="1679928437936" duration="110009000" />
     </task>
     <task id="LOCAL-00001" summary="Add functionality to load customer data from API endpoint">
       <created>1679896522937</created>
@@ -216,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679988131988</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="modif: convert signup and login html to jsp and created a servlet to retrieve registration data from the html">
+      <created>1680030104328</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680030104328</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,47 +237,7 @@
     <MESSAGE value="feat: Add customer details view, customer login, and customer signup pages&quot;" />
     <MESSAGE value="modif: &quot;ViewCustomers&quot; html file has been modified in table format to display all the data in database." />
     <MESSAGE value="modif : Convert the CustomerRegistration and Login html files to JSP" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif : Convert the CustomerRegistration and Login html files to JSP" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="modif: convert signup and login html to jsp and created a servlet to retrieve registration data from the html" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif: convert signup and login html to jsp and created a servlet to retrieve registration data from the html" />
   </component>
 </project>

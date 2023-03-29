@@ -10,5 +10,5 @@ Id   |  Date        |  Remark
 006  |  27/03/2023  |  Modified "ViewCustomers" html file in table format to display all the data from the database.
 
 007  |  28/03/2023  |  Convert the Signup and Login html files to JSP as "UserRegistration.jsp" and "UserLogin.jsp" and created Servlet as 'RegistrationServlet' to retrieve data entered in the html
-008  |  28/03/2023  |  Design the Admin Dashboard
+008  |  28/03/2023  |  Design the Admin Dashboard and Customer Dashboard
 

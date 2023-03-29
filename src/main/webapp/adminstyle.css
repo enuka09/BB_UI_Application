@@ -21,8 +21,15 @@ body{
     background: #fff;
 }
 .logo{
+    margin-left: 20px;
     display: flex;
     align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
 }
 
 /*.logo img{*/
@@ -32,6 +39,7 @@ body{
 /*}*/
 
 .search_box{
+    margin-left: 110px;
     display: flex;
     align-items: center;
 }
@@ -51,6 +59,7 @@ body{
     border-bottom-right-radius: 5px;
 }
 .header-icons{
+    margin-right: 30px;
     display: flex;
     align-items: center;
 }
@@ -95,7 +104,7 @@ body{
     font-size: 15px;
     padding: 6px 8px 6px 16px;
     margin-left: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     text-decoration: none;
     color: #0B9394;
     display: block;
@@ -130,6 +139,7 @@ body{
 
 
 /* Main Body Section */
+
 .main-body{
     margin-left: 250px;
     width: 70%;
@@ -137,7 +147,7 @@ body{
 }
 .promo_card{
 
-    width: 100%;
+    width: 1150px;
     color: #fff;
     margin-top: 10px;
     border-radius: 8px;
@@ -165,6 +175,7 @@ body{
     align-items: center;
     margin: 1rem 0;
 }
+
 table{
     background: #fff;
     padding: 1rem;
@@ -181,3 +192,5 @@ table td{
     font-size: 13px;
     color: #0B9394;
 }
+
+

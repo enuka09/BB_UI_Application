@@ -11,9 +11,9 @@
 <body>
 <header class="header">
   <div class="logo">
-    <img src="Images/logo.png">
+    <img src="Images/logo.png" alt="logo">
     <div class="search_box">
-      <input type="text" placeholder="Search EasyPay">
+      <input type="text" placeholder="Search Here">
       <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
     </div>
   </div>
@@ -21,14 +21,14 @@
   <div class="header-icons">
     <span style='color: #0B9394;'><i class="fas fa-bell"></i></span>
     <div class="account">
-      <img src="b" alt="">
-      <h4>Jhon Viek</h4>
+      <img src="Images/admin-profile.jpg" alt="admin-img">
+      <h4>&nbsp&nbspEnuka&nbsp&nbspPinsara</h4>
     </div>
   </div>
 </header>
 <div class="container">
   <div class="sidebarnew">
-    <span>Menu</span>
+    <span style="color: #9DD3D4">Menu</span>
     <a href="#home"><i class='fa fa-home'></i><span style='display:inline-block; margin-left: 10px;'>Home</span></a>
     <a href="#profile"><i class='fa-solid fa-address-card'></i><span style='display:inline-block; margin-left: 10px;'>Profile</span></a>
     <a href="#product"><i class='fa-solid fa-bag-shopping'></i><span style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
