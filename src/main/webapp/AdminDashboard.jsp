@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <title>Admin Dashboard | By Code Info</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-  <style>/*  import google fonts */
+  <style>
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
   *{
     margin: 0;
@@ -38,12 +38,6 @@
     height: auto;
     margin-right: 1rem;
   }
-
-  /*.logo img{*/
-  /*    color: #989394;*/
-  /*    background-size: 10px;*/
-  /*    margin: 2rem 8rem 2rem 2rem;*/
-  /*}*/
 
   .search_box{
     margin-left: 110px;
@@ -106,6 +100,14 @@
     border-radius: 5px;
   }
 
+  .selected-icon{
+    color: #ffffff;
+    background: #0b9394;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 200px;
+  }
+
   .bottom-icon{
     margin-top: 150px;
   }
@@ -135,6 +137,7 @@
   .sidebarnew a:hover {
     background: #EDFBFB;
     padding: 6px 4px 6px 12px;
+    border-radius: 10px;
   }
 
   .main-body{
@@ -212,11 +215,14 @@
 <div class="container">
   <div class="sidebarnew">
     <span style="color: #9DD3D4">Menu</span>
-    <a href="#home"><i class='fa fa-home'></i><span style='display:inline-block; margin-left: 10px;'>Home</span></a>
+    <div class="selected-icon">
+      <i class='fa fa-home' style="margin-left: 20px; margin-top: 30px"></i><span style='display:inline-block; margin-left: 10px; color: #ffffff;'>Home</span>
+    </div>
     <a href="#profile"><i class='fa-solid fa-address-card'></i><span style='display:inline-block; margin-left: 10px;'>Profile</span></a>
     <a href="#product"><i class='fa-solid fa-bag-shopping'></i><span style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
     <a href="#category"><i class='fa-solid fa-store'></i><span style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
-    <a href="#customer"><i class='fa-solid fa-people-roof'></i><span style='display:inline-block; margin-left: 10px;'>Manage Users</span></a>
+    <a href="ViewUsers.jsp"><i class='fa-solid fa-people-roof'></i><span style='display:inline-block; margin-left: 10px;'>Manage Users</span></a>
+
     <div class="bottom-icon">
     <a href="#profile"><i class="fa-solid fa-right-from-bracket"></i><span style='display:inline-block; margin-left: 10px;'>Logout</span></a>
     </div>
@@ -352,6 +358,30 @@
     </div>
   </div>
 </div>
+
+
+
+<script>
+  const url = 'http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/customer';
+  const customerData = document.getElementById('customerData');
+  const loadButton = document.getElementById('idLoad');
+
+  loadButton.addEventListener('click', function() {
+    fetch(url)
+            .then(response => response.json())
+            .then(data => {
+              try {
+                customerData.value = JSON.stringify(data);
+                document.getElementById('customerForm').submit();
+              } catch (error) {
+                console.error(error);
+              }
+            })
+            .catch(error => console.error(error));
+  });
+</script>
+
+
 </body>
 </html>
 

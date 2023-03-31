@@ -11,19 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8e851a4e-5cb3-42c5-a897-88df6005fef9" name="Changes" comment="Design Admin Dashboard and Customer Dashboard">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/AdminLoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/UserLoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/AdminLogin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/logo-front.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../REST/.idea/REST.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Advanced Programming_CL.BSCSD.25.35_(st20267804).docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
@@ -31,10 +18,7 @@
       <change beforePath="$PROJECT_DIR$/Modifications" beforeDir="false" afterPath="$PROJECT_DIR$/Modifications" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AdminDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AdminDashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/CustomerDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/CustomerDashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/UserLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserLogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/UserRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserRegistration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminstyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ViewCustomers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ViewCustomers.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,6 +192,8 @@
       <workItem from="1680180937043" duration="15738000" />
       <workItem from="1680241949472" duration="1661000" />
       <workItem from="1680244579976" duration="10313000" />
+      <workItem from="1680263515986" duration="20142000" />
+      <workItem from="1680284444166" duration="3584000" />
     </task>
     <task id="LOCAL-00001" summary="Add functionality to load customer data from API endpoint">
       <created>1679896522937</created>
