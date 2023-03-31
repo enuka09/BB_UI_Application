@@ -35,21 +35,13 @@
             box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
         }
         nav .logo {
+            width: 200px;
+            height: 150px;
             display: flex;
-            align-items: center;
-            margin: 0 24px;
+
+            margin: 0 35px;
         }
-        .logo .menu-icon {
-            color: #333;
-            font-size: 24px;
-            margin-right: 14px;
-            cursor: pointer;
-        }
-        .logo .logo-name {
-            color: #333;
-            font-size: 22px;
-            font-weight: 500;
-        }
+
 
         .navbar-b{
             display: flex;
@@ -57,6 +49,7 @@
             justify-content: space-between;
         }
         .dropdown{
+            margin-left: 0px;
             width: 130px;
             text-align: center;
             background-color: white;
@@ -67,7 +60,7 @@
             border: none;
             background: none;
             padding: 7px 10px 7px 0px;
-            color: #54B3B4;
+            color: #333;
             font-size: 18px;
             cursor: pointer;
         }
@@ -80,7 +73,7 @@
             height: 45px;
             border-radius: 45px;
             display: flex;
-            margin-left: 200px;
+            margin-left: 220px;
             align-items: center;
             justify-content: space-between;
             padding: 15px;
@@ -95,7 +88,7 @@
             display: flex;
             background-color: white;
             justify-content: space-between;
-            margin-left: 350px;
+            margin-left: 290px;
             padding: 7px 10px;
             border-radius: 3px;
             width: 80px;
@@ -112,70 +105,70 @@
             color: white;
         }
 
-        nav .sidebar {
+        .sidebar {
             position: fixed;
-            top: 0;
-            left: -100%;
-            height: 100%;
-            width: 260px;
-            padding: 20px 0;
-            background-color: #fff;
-            box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-        }
-        nav.open .sidebar {
+            top: 70px;
             left: 0;
-        }
-        .sidebar .sidebar-content {
-            display: flex;
             height: 100%;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 30px 16px;
+            width: 250px;
+            background-color:#54B3B4;
+            padding: 20px;
         }
-        .sidebar-content .list {
-            list-style: none;
+
+        .sidebar-content {
+            margin-top: 50px;
+            height: calc(100% - 80px);
         }
-        .list .nav-link {
+
+        .lists {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .list {
+            margin-bottom: 15px;
+        }
+
+        .nav-link {
             display: flex;
             align-items: center;
-            margin: 8px 0;
-            padding: 14px 12px;
-            border-radius: 8px;
             text-decoration: none;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        .lists .nav-link:hover {
-            background-color: #DBF8F8;
+
+        .icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
         }
-        .nav-link .icon {
-            margin-right: 14px;
-            font-size: 20px;
-            color: #707070;
+
+        .link {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
         }
-        .nav-link .link {
-            font-size: 16px;
-            color: #707070;
-            font-weight: 400;
+
+        .bottom-cotent {
+            margin-top: 180px;
         }
-        .lists .nav-link:hover .icon,
-        .lists .nav-link:hover .link {
-            color: #fff;
+
+        .Top-cotent {
+            margin-top: -20px;
+            margin-bottom: 40px;
+            color: #F7F7F7;
         }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            height: 1000vh;
-            width: 200%;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.4s ease;
-            background: rgba(0, 0, 0, 0.3);
+
+        .nav-link:hover {
+            background-color: #ddd;
         }
-        nav.open ~ .overlay {
-            opacity: 1;
-            left: 260px;
-            pointer-events: auto;
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                padding: 10px;
+            }
         }
 
 
@@ -200,7 +193,7 @@
             place-content: center;
         }
         .container{
-            margin-left: 200px;
+            margin-left: 250px;
             width: 80vw;
             height:80vh;
             display: flex;
@@ -208,13 +201,15 @@
             justify-content: space-around;
         }
         .header{
+            background-color: #54B3B4;
             width: 100%;
-            text-align: center;
+
         }
         .header h2{
             font-size: 2em;
             text-transform: uppercase;
-            color: #0B9394;
+            text-align: center;
+            color: #ffffff;
         }
         .products{
             width: 100%;
@@ -292,17 +287,12 @@
         .bay button:hover{
             transform: scale(1.1);
         }
-
-
-
-
     </style>
 </head>
 <body>
 <nav>
     <div class="logo">
-        <i class="bx bx-menu menu-icon"></i>
-        <span class="logo-name">BumbleBee</span>
+        <img src="Images/logo-front.png">
     </div>
 
     <div class="navbar-b">
@@ -325,64 +315,52 @@
     <div class="sidebar">
         <div class="sidebar-content">
             <ul class="lists">
+                <div class="Top-cotent">
+                    <li class="list">
+                        <span class="link">Settings</span>
+                        </a>
+                    </li>
+                </div>
                 <li class="list">
                     <a href="#" class="nav-link">
-                        <i class="bx bx-home-alt icon"></i>
-                        <span class="link">Dashboard</span>
+                        &nbsp<i class="fa-regular fa-user"></i>&nbsp&nbsp&nbsp&nbsp
+                        <span class="link">Profile</span>
                     </a>
                 </li>
                 <li class="list">
                     <a href="#" class="nav-link">
                         <i class="bx bx-bar-chart-alt-2 icon"></i>
-                        <span class="link">Revenue</span>
+                        <span class="link">Purchases</span>
                     </a>
                 </li>
                 <li class="list">
                     <a href="#" class="nav-link">
-                        <i class="bx bx-bell icon"></i>
-                        <span class="link">Notifications</span>
+                        &nbsp<i class="fa-solid fa-dollar-sign"></i>&nbsp&nbsp&nbsp&nbsp
+                        <span class="link">Loan Details</span>
                     </a>
                 </li>
                 <li class="list">
                     <a href="#" class="nav-link">
                         <i class="bx bx-message-rounded icon"></i>
-                        <span class="link">Messages</span>
+                        <span class="link">Ask Questions</span>
                     </a>
                 </li>
                 <li class="list">
                     <a href="#" class="nav-link">
                         <i class="bx bx-pie-chart-alt-2 icon"></i>
-                        <span class="link">Analytics</span>
+                        <span class="link">Reports</span>
                     </a>
                 </li>
-                <li class="list">
-                    <a href="#" class="nav-link">
-                        <i class="bx bx-heart icon"></i>
-                        <span class="link">Likes</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#" class="nav-link">
-                        <i class="bx bx-folder-open icon"></i>
-                        <span class="link">Files</span>
-                    </a>
-                </li>
-            </ul>
 
-            <div class="bottom-cotent">
-                <li class="list">
-                    <a href="#" class="nav-link">
-                        <i class="bx bx-cog icon"></i>
-                        <span class="link">Settings</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#" class="nav-link">
-                        <i class="bx bx-log-out icon"></i>
-                        <span class="link">Logout</span>
-                    </a>
-                </li>
-            </div>
+                <div class="bottom-cotent">
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="link">Logout</span>
+                        </a>
+                    </li>
+                </div>
+            </ul>
         </div>
     </div>
 </nav>
@@ -401,7 +379,7 @@
             </div>
             <div class="namePrice">
                 <h3>Headset</h3>
-                <span>$ 15.99</span>
+                <span>LKR 6,000</span>
             </div>
             <p>Headphones Type Closed dynamic Driver Diameter 40 mm Frequency</p>
             <div class="stars">
@@ -422,7 +400,7 @@
             </div>
             <div class="namePrice">
                 <h3>Camera</h3>
-                <span>$ 120.99</span>
+                <span>LKR 10,000</span>
             </div>
             <p>Integrated WiFi - control camera from smart device</p>
             <div class="stars">
@@ -430,7 +408,7 @@
                 <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
                 <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
                 <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-regular fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
             </div>
             <div class="bay">
                 <button> Buy now </button>
@@ -442,31 +420,10 @@
                 <img src="Images/Products/product3.jpg" alt="product3">
             </div>
             <div class="namePrice">
-                <h3>Mobile</h3>
-                <span>$ 150.99</span>
+                <h3>Helmet</h3>
+                <span>LKR 5,500</span>
             </div>
-            <p>Galaxy Z Flip is equipped with 5G* and our fastest processor to date.</p>
-            <div class="stars">
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-            </div>
-            <div class="bay">
-                <button> Buy now </button>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="image">
-                <img src="Images/Products/product4.jpg" alt="product4">
-            </div>
-            <div class="namePrice">
-                <h3>Laptop</h3>
-                <span>$ 20.99</span>
-            </div>
-            <p>Lenovo ThinkBook 15 G3 Ryzen 3 15.6" FHD Thin and Light Laptop </p>
+            <p>Multi-Purpose Half Helmet for Men, Women (Sage Square)</p>
             <div class="stars">
                 <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
                 <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
@@ -481,11 +438,32 @@
 
         <div class="product">
             <div class="image">
-                <img src="Images/Products/product1.jpg" alt="product1">
+                <img src="Images/Products/product7.jpg" alt="product4">
             </div>
             <div class="namePrice">
-                <h3>Headset</h3>
-                <span>$ 15.99</span>
+                <h3>Mouse</h3>
+                <span>LKR 3,000</span>
+            </div>
+            <p>Kensington Pro Fit Wireless Mobile Mouse. 2.4GHz wireless</p>
+            <div class="stars">
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-regular fa-star" style="color:#54B3B4;"></i>
+            </div>
+            <div class="bay">
+                <button>  Buy now </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="image">
+                <img src="Images/Products/product4.jpg" alt="product4">
+            </div>
+            <div class="namePrice">
+                <h3>Ear Buds</h3>
+                <span>LKR 11,000</span>
             </div>
             <p>Headphones Type Closed dynamic Driver Diameter 40 mm Frequency</p>
             <div class="stars">
@@ -502,13 +480,13 @@
 
         <div class="product">
             <div class="image">
-                <img src="Images/Products/product1.jpg" alt="product1">
+                <img src="Images/Products/product5.jpg" alt="product5">
             </div>
             <div class="namePrice">
-                <h3>Headset</h3>
-                <span>$ 15.99</span>
+                <h3>Watch</h3>
+                <span>LKR 12,000</span>
             </div>
-            <p>Headphones Type Closed dynamic Driver Diameter 40 mm Frequency</p>
+            <p>Series 6 44MM Gold Aluminum GPS, Pink Sand Sport Band</p>
             <div class="stars">
                 <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
                 <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
@@ -521,7 +499,68 @@
             </div>
         </div>
 
+        <div class="product">
+            <div class="image">
+                <img src="Images/Products/product6.jpg" alt="product6">
+            </div>
+            <div class="namePrice">
+                <h3>Lamp</h3>
+                <span>LKR 4,000</span>
+            </div>
+            <p>Moffatt 95040 Task Lamp Incandescent Type Quick Coupler</p>
+            <div class="stars">
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-regular fa-star" style="color:#54B3B4;"></i>
+            </div>
+            <div class="bay">
+                <button>  Buy now </button>
+            </div>
+        </div>
 
+        <div class="product">
+            <div class="image">
+                <img src="Images/Products/product9.jpg" alt="product5">
+            </div>
+            <div class="namePrice">
+                <h3>Sunglass</h3>
+                <span>LKR 9,000</span>
+            </div>
+            <p>Fossil Non-Polarized Round Female's Sunglasses (Gold)</p>
+            <div class="stars">
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-regular fa-star" style="color:#54B3B4;"></i>
+            </div>
+            <div class="bay">
+                <button>  Buy now </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="image">
+                <img src="Images/Products/product8.jpg" alt="product8">
+            </div>
+            <div class="namePrice">
+                <h3>Mic</h3>
+                <span>LKR 7,000</span>
+            </div>
+            <p>Designed for home audio recording, music and sound projects</p>
+            <div class="stars">
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
+            </div>
+            <div class="bay">
+                <button>  Buy now </button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -529,21 +568,6 @@
 
 <section class="overlay"></section>
 
-<script>
-    const navBar = document.querySelector("nav"),
-        menuBtns = document.querySelectorAll(".menu-icon"),
-        overlay = document.querySelector(".overlay");
-
-    menuBtns.forEach((menuBtn) => {
-        menuBtn.addEventListener("click", () => {
-            navBar.classList.toggle("open");
-        });
-    });
-
-    overlay.addEventListener("click", () => {
-        navBar.classList.remove("open");
-    });
-</script>
 </body>
 </html>
 

@@ -12,3 +12,5 @@ Id   |  Date        |  Remark
 007  |  28/03/2023  |  Convert the Signup and Login html files to JSP as "UserRegistration.jsp" and "UserLogin.jsp" and created Servlet as 'RegistrationServlet' to retrieve data entered in the html
 008  |  28/03/2023  |  Design the Admin Dashboard and Customer Dashboard
 
+009  |  31/03/2023  |  Modify the 'UserLogin' jsp and Created a Java servlet as 'UserLoginServlet', there created user login functionality using POST request to backend API with sessions
+010  |  31/03/2023  |  Create the 'AdminLogin' jsp and Created a Java servlet as 'AdminLoginServlet', there created admin login functionality using POST request to backend API with sessions

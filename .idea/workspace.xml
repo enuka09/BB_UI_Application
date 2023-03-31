@@ -9,19 +9,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e851a4e-5cb3-42c5-a897-88df6005fef9" name="Changes" comment="modif: convert signup and login html to jsp and created a servlet to retrieve registration data from the html">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/admin-profile.jpg" afterDir="false" />
+    <list default="true" id="8e851a4e-5cb3-42c5-a897-88df6005fef9" name="Changes" comment="Design Admin Dashboard and Customer Dashboard">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/AdminLoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/UserLoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/AdminLogin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/Products/product9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Images/logo-front.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../REST/.idea/REST.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Advanced Programming_CL.BSCSD.25.35_(st20267804).docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modifications" beforeDir="false" afterPath="$PROJECT_DIR$/Modifications" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AdminDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AdminDashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/CustomerDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/CustomerDashboard.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/UserLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserLogin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/UserRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserRegistration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminstyle.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +44,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="CSS File" />
-        <option value="Jsp File" />
         <option value="HTML File" />
+        <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -64,30 +77,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Bsc. (Hons) Computing and SE/Semester 01/Advanced Programming/BB_UI_Application/src/main/webapp/Images/Products",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Bsc. (Hons) Computing and SE/Semester 01/Advanced Programming/BB_UI_Application&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Bsc. (Hons) Computing and SE\Semester 01\Advanced Programming\BB_UI_Application\src\main\webapp\Images\Products" />
@@ -189,7 +202,12 @@
       <workItem from="1679825211368" duration="963000" />
       <workItem from="1679834387181" duration="3579000" />
       <workItem from="1679895702071" duration="30633000" />
-      <workItem from="1679928437936" duration="110009000" />
+      <workItem from="1679928437936" duration="118877000" />
+      <workItem from="1680163630506" duration="98000" />
+      <workItem from="1680163920667" duration="15312000" />
+      <workItem from="1680180937043" duration="15738000" />
+      <workItem from="1680241949472" duration="1661000" />
+      <workItem from="1680244579976" duration="10313000" />
     </task>
     <task id="LOCAL-00001" summary="Add functionality to load customer data from API endpoint">
       <created>1679896522937</created>
@@ -226,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680030104328</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Design Admin Dashboard and Customer Dashboard">
+      <created>1680117930966</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680117930966</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +263,7 @@
     <MESSAGE value="modif: &quot;ViewCustomers&quot; html file has been modified in table format to display all the data in database." />
     <MESSAGE value="modif : Convert the CustomerRegistration and Login html files to JSP" />
     <MESSAGE value="modif: convert signup and login html to jsp and created a servlet to retrieve registration data from the html" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif: convert signup and login html to jsp and created a servlet to retrieve registration data from the html" />
+    <MESSAGE value="Design Admin Dashboard and Customer Dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Design Admin Dashboard and Customer Dashboard" />
   </component>
 </project>

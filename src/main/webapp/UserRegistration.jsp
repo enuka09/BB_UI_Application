@@ -1,4 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -162,19 +161,66 @@
         <img src="Images/bg-signup.jpg" alt="Sign-Up Image">
     </div>
     <div class="reg-form-container">
-        <form class="form" id="registration-form" method="POST" action="${pageContext.request.contextPath}/RegistrationServlet">
+        <form class="form" action="#">
             <h2 class="form-title">CREATE NEW ACCOUNT</h2>
-            <input type="text" name="CusFirstName" class="form-input" placeholder="First Name" required>
-            <input type="text" name="CusLastName" class="form-input" placeholder="Last Name" required>
-            <input type="text" name="CusUsername" class="form-input" placeholder="Username" required>
-            <input type="password" name="CusPassword" class="form-input" placeholder="Password" required>
+            <input type="text" name="firstname" id="txtfirstName" class="form-input" placeholder="First Name" required>
+            <input type="text" name="lastname" id="txtlastName" class="form-input" placeholder="Last Name" required>
+            <input type="text" name="username" id="txtusername" class="form-input" placeholder="Username" required>
+            <input type="password" name="password" id="txtpassword" class="form-input" placeholder="Password" required>
             <input type="password" class="form-input" placeholder="Confirm Password" required>
-            <input type="text" name="CusNIC" class="form-input" placeholder="NIC Number" required>
-            <input type="date" name="CusDOB" id="dob" class="form-input" placeholder="Select DOB" required>
-            <button type="submit" name="register" class="form-button-reg">REGISTER</button>
+            <input type="text" name="nic" id="txtnic" class="form-input" placeholder="NIC Number" required>
+            <input type="date" name="dob"  id="txtdob" class="form-input" placeholder="Select DOB" required>
+            <button id="idAdd" name="register" class="form-button-reg" onclick="submitForm()">REGISTER</button>
             <span class="form-span">Already have an account? <a href="${pageContext.request.contextPath}/UserLogin.jsp" class="form-link">Login Here</a></span>
         </form>
     </div>
 </div>
+
+<script>
+
+    const url = 'http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/customer';
+    function submitForm() {
+        event.preventDefault();
+
+        const firstName = document.getElementById("txtfirstName").value;
+        const lastName = document.getElementById("txtlastName").value;
+        const username = document.getElementById("txtusername").value;
+        const password = document.getElementById("txtpassword").value;
+        const nic = document.getElementById("txtnic").value;
+        const dob = document.getElementById("txtdob").value;
+
+
+        const customer = {
+            firstname: firstName,
+            lastname: lastName,
+            username: username,
+            password: password,
+            nic: nic,
+            dob: dob,
+        };
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(customer)
+        })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Customer registration successful!');
+                    alert("Registration successful!");
+                    location.reload();
+                } else {
+                    console.error('Error registering customer.');
+                    alert("Registration Not successful!");
+                    location.reload();
+                }
+            })
+            .catch(error =>
+                console.error('Error registering customer:', error));
+    }
+</script>
+
 </body>
 </html>
