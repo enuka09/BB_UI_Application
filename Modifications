@@ -14,4 +14,8 @@ Id   |  Date        |  Remark
 
 009  |  31/03/2023  |  Modify the 'UserLogin' jsp and Created a Java servlet as 'UserLoginServlet', there created user login functionality using POST request to backend API with sessions
 010  |  31/03/2023  |  Create the 'AdminLogin' jsp and Created a Java servlet as 'AdminLoginServlet', there created admin login functionality using POST request to backend API with sessions
-010  |  31/03/2023  |  Create 'ViewUsers' jsp, (admin function) with AJAX request to load customer data from backend
+011  |  31/03/2023  |  Create 'ViewUsers' jsp, (admin function) with AJAX request to load customer data from backend
+
+012  |  01/04/2023  |  Create new "CategoryServlet" to send a POST request to the backend API
+013  |  01/04/2023  |  Design "ManageCategory" jsp and "AddCategory" jsp files
+

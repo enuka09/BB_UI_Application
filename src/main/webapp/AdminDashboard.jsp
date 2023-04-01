@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Admin Dashboard | By Code Info</title>
+  <title>Admin Dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
   <style>
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
@@ -207,7 +207,7 @@
   <div class="header-icons">
     <span style='color: #0B9394;'><i class="fas fa-bell"></i></span>
     <div class="account">
-      <img src="Images/admin-profile.jpg" alt="admin-img">
+      <a href="AdminProfile.jsp"> <img src="Images/admin-profile.jpg" alt="admin-img"></a>
       <h4>&nbsp&nbspEnuka&nbsp&nbspPinsara</h4>
     </div>
   </div>
@@ -218,9 +218,9 @@
     <div class="selected-icon">
       <i class='fa fa-home' style="margin-left: 20px; margin-top: 30px"></i><span style='display:inline-block; margin-left: 10px; color: #ffffff;'>Home</span>
     </div>
-    <a href="#profile"><i class='fa-solid fa-address-card'></i><span style='display:inline-block; margin-left: 10px;'>Profile</span></a>
-    <a href="#product"><i class='fa-solid fa-bag-shopping'></i><span style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
-    <a href="#category"><i class='fa-solid fa-store'></i><span style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
+    <a href="ManageProducts.jsp"><i class='fa-solid fa-bag-shopping'></i><span style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
+    <a href="ManageBrands.jsp"><i class="fa-solid fa-ring"></i><span style='display:inline-block; margin-left: 10px;'>Manage Brands</span></a>
+    <a href="ManageCategory.jsp"><i class='fa-solid fa-store'></i><span style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
     <a href="ViewUsers.jsp"><i class='fa-solid fa-people-roof'></i><span style='display:inline-block; margin-left: 10px;'>Manage Users</span></a>
 
     <div class="bottom-icon">
