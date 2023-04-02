@@ -6,192 +6,192 @@
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
   <style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-  *{
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-  body{
-    background: #DBF8F8;
-  }
-  .header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    padding: 20px;
-    background: #fff;
-  }
-  .logo{
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-  }
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+    *{
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      text-decoration: none;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body{
+      background: #DBF8F8;
+    }
+    .header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      padding: 20px;
+      background: #fff;
+    }
+    .logo{
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
 
-  .logo img {
-    width: 100px;
-    height: auto;
-    margin-right: 1rem;
-  }
+    .logo img {
+      width: 100px;
+      height: auto;
+      margin-right: 1rem;
+    }
 
-  .search_box{
-    margin-left: 110px;
-    display: flex;
-    align-items: center;
-  }
-  .search_box input{
-    padding: 9px;
-    width: 250px;
-    background: #DBF8F8;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  .search_box i{
-    padding: 0.66rem;
-    cursor: pointer;
-    color: #fff;
-    background: #0B9394;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  .header-icons{
-    margin-right: 30px;
-    display: flex;
-    align-items: center;
-  }
-  .header-icons i{
-    margin-right: 2rem;
-    cursor: pointer;
-  }
-  .header-icons .account{
-    width: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .header-icons .account img{
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  .container{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
+    .search_box{
+      margin-left: 110px;
+      display: flex;
+      align-items: center;
+    }
+    .search_box input{
+      padding: 9px;
+      width: 250px;
+      background: #DBF8F8;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    .search_box i{
+      padding: 0.66rem;
+      cursor: pointer;
+      color: #fff;
+      background: #0B9394;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    .header-icons{
+      margin-right: 30px;
+      display: flex;
+      align-items: center;
+    }
+    .header-icons i{
+      margin-right: 2rem;
+      cursor: pointer;
+    }
+    .header-icons .account{
+      width: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-icons .account img{
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .container{
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
 
-  .sidebarnew {
-    margin-top: 70px;
-    height: 100%;
-    width: 230px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    overflow-x: hidden;
-    padding-top: 16px;
-    border-radius: 5px;
-  }
+    .sidebarnew {
+      margin-top: 70px;
+      height: 100%;
+      width: 230px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      overflow-x: hidden;
+      padding-top: 16px;
+      border-radius: 5px;
+    }
 
-  .selected-icon{
-    color: #ffffff;
-    background: #0b9394;
-    margin-left: 10px;
-    border-radius: 10px;
-    width: 200px;
-  }
+    .selected-icon{
+      color: #ffffff;
+      background: #0b9394;
+      margin-left: 10px;
+      border-radius: 10px;
+      width: 200px;
+    }
 
-  .bottom-icon{
-    margin-top: 150px;
-  }
+    .bottom-icon{
+      margin-top: 150px;
+    }
 
-  .sidebarnew span {
-    font-weight: 500;
-    font-size: 15px;
-    padding: 6px 8px 6px 16px;
-    margin-left: 10px;
-    margin-bottom: 35px;
-    text-decoration: none;
-    color: #0B9394;
-    display: block;
-  }
+    .sidebarnew span {
+      font-weight: 500;
+      font-size: 15px;
+      padding: 6px 8px 6px 16px;
+      margin-left: 10px;
+      margin-bottom: 35px;
+      text-decoration: none;
+      color: #0B9394;
+      display: block;
+    }
 
-  .sidebarnew a {
-    font-weight: 500;
-    font-size: 15px;
-    padding: 6px 8px 6px 16px;
-    margin-left: 10px;
-    margin-bottom: -20px;
-    text-decoration: none;
-    color: #0B9394;
-    display: block;
-  }
+    .sidebarnew a {
+      font-weight: 500;
+      font-size: 15px;
+      padding: 6px 8px 6px 16px;
+      margin-left: 10px;
+      margin-bottom: -20px;
+      text-decoration: none;
+      color: #0B9394;
+      display: block;
+    }
 
-  .sidebarnew a:hover {
-    background: #EDFBFB;
-    padding: 6px 4px 6px 12px;
-    border-radius: 10px;
-  }
+    .sidebarnew a:hover {
+      background: #EDFBFB;
+      padding: 6px 4px 6px 12px;
+      border-radius: 10px;
+    }
 
-  .main-body{
-    margin-left: 250px;
-    width: 70%;
-    padding: 1rem;
-  }
+    .main-body{
+      margin-left: 250px;
+      width: 70%;
+      padding: 1rem;
+    }
 
-  .promo_card{
-    width: 1150px;
-    color: #fff;
-    margin-top: 10px;
-    border-radius: 8px;
-    padding: 0.5rem 1rem 1rem 3rem;
-    background: #0B9394;
-  }
-  .promo_card h1, .promo_card span, button{
-    margin: 5px;
-  }
-  .promo_card button{
-    margin-top: 10px;
-    display: block;
-    padding: 6px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .history_lists{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem 0;
-  }
+    .promo_card{
+      width: 1150px;
+      color: #fff;
+      margin-top: 10px;
+      border-radius: 8px;
+      padding: 0.5rem 1rem 1rem 3rem;
+      background: #0B9394;
+    }
+    .promo_card h1, .promo_card span, button{
+      margin: 5px;
+    }
+    .promo_card button{
+      margin-top: 10px;
+      display: block;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .history_lists{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1rem 0;
+    }
 
-  table{
-    background: #fff;
-    padding: 1rem;
-    text-align: left;
-    border-radius: 10px;
-  }
-  table td, th{
-    padding: 0.2rem 0.8rem;
-  }
-  table th{
-    font-size: 15px;
-  }
-  table td{
-    font-size: 13px;
-    color: #0B9394;
-  }
+    table{
+      background: #fff;
+      padding: 1rem;
+      text-align: left;
+      border-radius: 10px;
+    }
+    table td, th{
+      padding: 0.2rem 0.8rem;
+    }
+    table th{
+      font-size: 15px;
+    }
+    table td{
+      font-size: 13px;
+      color: #0B9394;
+    }
   </style>
 </head>
 <body>
@@ -220,11 +220,11 @@
     </div>
     <a href="ManageProducts.jsp"><i class='fa-solid fa-bag-shopping'></i><span style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
     <a href="ManageBrands.jsp"><i class="fa-solid fa-ring"></i><span style='display:inline-block; margin-left: 10px;'>Manage Brands</span></a>
-    <a href="ManageCategory.jsp"><i class='fa-solid fa-store'></i><span style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
+    <a href="ManageCategories.jsp"><i class='fa-solid fa-store'></i><span style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
     <a href="ViewUsers.jsp"><i class='fa-solid fa-people-roof'></i><span style='display:inline-block; margin-left: 10px;'>Manage Users</span></a>
 
     <div class="bottom-icon">
-    <a href="#profile"><i class="fa-solid fa-right-from-bracket"></i><span style='display:inline-block; margin-left: 10px;'>Logout</span></a>
+      <a href="#profile"><i class="fa-solid fa-right-from-bracket"></i><span style='display:inline-block; margin-left: 10px;'>Logout</span></a>
     </div>
   </div>
 

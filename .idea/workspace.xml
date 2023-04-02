@@ -9,16 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e851a4e-5cb3-42c5-a897-88df6005fef9" name="Changes" comment="Design Admin Dashboard and Customer Dashboard">
+    <list default="true" id="8e851a4e-5cb3-42c5-a897-88df6005fef9" name="Changes" comment="feat: Add &quot;CategoryServlet&quot; to send POST request to the backend API for adding new category">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/EditCategoryServlet.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../REST/.idea/REST.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Advanced Programming_CL.BSCSD.25.35_(st20267804).docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modifications" beforeDir="false" afterPath="$PROJECT_DIR$/Modifications" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AddCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AddCategory.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AdminDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AdminDashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ViewCustomers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ViewCustomers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManageCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManageCategories.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ViewUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ViewUsers.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +89,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.bumblebeeloanapplicationui" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Bsc. (Hons) Computing and SE\Semester 01\Advanced Programming\BB_UI_Application\src\main\webapp\Images\Products" />
       <recent name="E:\Bsc. (Hons) Computing and SE\Semester 01\Advanced Programming\BB_UI_Application\src\main\webapp\Images" />
@@ -193,7 +199,11 @@
       <workItem from="1680241949472" duration="1661000" />
       <workItem from="1680244579976" duration="10313000" />
       <workItem from="1680263515986" duration="20142000" />
-      <workItem from="1680284444166" duration="3584000" />
+      <workItem from="1680284444166" duration="3928000" />
+      <workItem from="1680288410694" duration="18000" />
+      <workItem from="1680332031536" duration="29410000" />
+      <workItem from="1680375568026" duration="5583000" />
+      <workItem from="1680412295141" duration="38133000" />
     </task>
     <task id="LOCAL-00001" summary="Add functionality to load customer data from API endpoint">
       <created>1679896522937</created>
@@ -237,11 +247,36 @@
       <option name="project" value="LOCAL" />
       <updated>1680117930966</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: Add customer details page with AJAX request to load customer data">
+      <created>1680288288958</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680288288958</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: Add &quot;CategoryServlet&quot; to send POST request to the backend API for adding new category">
+      <created>1680374847167</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680374847167</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add functionality to load customer data from API endpoint" />
@@ -250,6 +285,8 @@
     <MESSAGE value="modif : Convert the CustomerRegistration and Login html files to JSP" />
     <MESSAGE value="modif: convert signup and login html to jsp and created a servlet to retrieve registration data from the html" />
     <MESSAGE value="Design Admin Dashboard and Customer Dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Design Admin Dashboard and Customer Dashboard" />
+    <MESSAGE value="feat: Add customer details page with AJAX request to load customer data" />
+    <MESSAGE value="feat: Add &quot;CategoryServlet&quot; to send POST request to the backend API for adding new category" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add &quot;CategoryServlet&quot; to send POST request to the backend API for adding new category" />
   </component>
 </project>

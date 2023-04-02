@@ -19,3 +19,7 @@ Id   |  Date        |  Remark
 012  |  01/04/2023  |  Create new "CategoryServlet" to send a POST request to the backend API
 013  |  01/04/2023  |  Design "ManageCategory" jsp and "AddCategory" jsp files
 
+014  |  02/04/2023  |  Add delete category functionality and confirmation message in "ManageCategory"
+015  |  02/04/2023  |  Add Edit category functionality via REST API call
+
+

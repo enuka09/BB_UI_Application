@@ -213,9 +213,9 @@
     <div class="sidebarnew">
         <span style="color: #9DD3D4">Menu</span>
         <a href="AdminDashboard.jsp"><i class='fa fa-home'></i><span style='display:inline-block; margin-left: 10px;'>Home</span></a>
-        <a href="AdminProfile.jsp"><i class='fa-solid fa-address-card'></i><span style='display:inline-block; margin-left: 10px;'>Profile</span></a>
         <a href="ManageProducts.jsp"><i class='fa-solid fa-bag-shopping'></i><span style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
-        <a href="ManageCategory.jsp"><i class='fa-solid fa-store'></i><span style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
+        <a href="ManageBrands.jsp"><i class="fa-solid fa-ring"></i><span style='display:inline-block; margin-left: 10px;'>Manage Brands</span></a>
+        <a href="ManageCategories.jsp"><i class='fa-solid fa-store'></i><span style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
         <div class="selected-icon">
             <i class='fa-solid fa-people-roof' style="margin-left: 20px; margin-top: 30px"></i><span style='display:inline-block; margin-left: 10px; color: #ffffff;'>Manage Users</span>
         </div>
@@ -224,7 +224,6 @@
         </div>
     </div>
 </div>
-
 <div class="main-body">
 
     <div class="promo_card">

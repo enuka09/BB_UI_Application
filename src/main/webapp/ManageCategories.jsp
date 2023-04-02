@@ -1,8 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Manage Category</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <style>
@@ -44,7 +46,7 @@
         }
 
         .search_box{
-            margin-left: 900px;
+            margin-left: 480px;
             margin-top: -50px;
             display: flex;
             align-items: center;
@@ -151,7 +153,7 @@
             margin-left: -10px;
         }
 
-        .btn {
+        .add_category_btn {
             display: inline-block;
             padding: 10px 20px;
             background-color: #0B9394;
@@ -164,22 +166,22 @@
             cursor: pointer;
         }
 
-        .btn:hover {
+        .add_category_btn:hover {
             background-color: #087576;
         }
 
         .main-body{
-            margin-top: 80px;
-            margin-left: 280px;
+            margin-top: 50px;
+            margin-left: 265px;
             width: 70%;
             padding: 1rem;
         }
 
 
         table {
-            margin-left: 295px;
+            margin-left: 280px;
             margin-top: 10px;
-            width: 70%;
+            width: 50%;
             border-collapse: collapse;
             border-radius: 10px;
             overflow: hidden;
@@ -210,9 +212,95 @@
             border-bottom-right-radius: 10px;
             border-bottom: 2px solid #dee2e6;
         }
+
+        .del_category_btn {
+            background-color: #CC0000;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .del_category_btn:hover {
+            background-color: #A30000;
+        }
+
+        .edit_category_btn {
+            background-color: #8FCE00;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .edit_category_btn:hover {
+            background-color: #72A400;
+        }
+
+        .edit-form{
+            width: 400px;
+            margin-left: 1080px;
+            margin-top: -530px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .edit-form label{
+            margin-left: 30px;
+        }
+        .edit-form input{
+            padding-left: 10px;
+        }
+
+        .edit-form h2{
+            margin-left: 30px;
+        }
+
+        .edit-form button{
+            margin-bottom: 30px;
+            border-radius: 10px;
+            width: 80px;
+            height: 40px;
+            color: #ffffff;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .save-btn{
+            margin-left: 30px;
+            background: #0b9394
+        }
+
+        .save-btn:hover{
+            background: #087576
+        }
+
+        .cancel-btn{
+            margin-left: 10px;
+            background: #ABABAB;
+            padding-left: -30px;
+        }
+        .cancel-btn:hover{
+            background: #888888;
+        }
+
+
+
     </style>
 </head>
-
 <body onload="loadCategory()">
 
 <header class="header">
@@ -249,10 +337,10 @@
 <div class="main-body">
 
     <div class="promo_card">
-        <h2>Category Details</h2>
+        <h1 style="margin-left:0px;">CATEGORY DETAILS</h1>
     </div>
     <div class="control-btn">
-        <button class="btn" onclick="window.location.href = 'AddCategory.jsp'">Add New Category</button>
+        <button class="add_category_btn" onclick="window.location.href = 'AddCategory.jsp'">Add New Category</button>
 
         <div class="search_box">
             <input type="text" placeholder="Search Here">
@@ -271,6 +359,19 @@
     </thead>
     <tbody id="categoryTable"></tbody>
 </table>
+
+<div class="edit-form" id="editCategoryModal" style="display:none">
+    <h2 style="margin-bottom: 30px; padding-top: 30px">Edit Category</h2>
+    <form id="editCategoryForm" action="${pageContext.request.contextPath}/editCategory" method="POST">
+        <label for="categoryId">Category ID:</label>
+        <input type="text" id="categoryId" name="categoryId"><br><br>
+        <label for="categoryName" style="background: none; border: #959595;">Category Name:</label>
+        <input type="text" id="categoryName" name="categoryName" style="border: 1px solid black; padding-left: 10px;">
+        <button type="submit" id="saveCategoryBtn" name="saveCategoryBtn" class="save-btn">Save</button>
+        <button type="button" id="cancelCategoryBtn" class="cancel-btn">Cancel</button>
+    </form>
+</div>
+
 <script>
     function loadCategory() {
         var xhttp = new XMLHttpRequest();
@@ -286,24 +387,46 @@
                     var actionsCell = row.insertCell(2);
                     idCell.innerHTML = categoryData[i].id;
                     nameCell.innerHTML = categoryData[i].name;
-                    actionsCell.innerHTML = '<button onclick="deleteCategory(' + categoryData[i].id + ')">Delete</button>';
+                    actionsCell.innerHTML = '<button class="edit_category_btn" data-id="' + categoryData[i].id + '">Edit</button> <button class="del_category_btn" data-id="' + categoryData[i].id + '">Delete</button>' ;
                 }
+                $(".edit_category_btn").click(function() {
+                    var id = $(this).data("id");
+                    var name = $(this).closest("tr").find("td:eq(1)").text();
+                    $("#categoryId").val(id);
+                    $("#categoryName").val(name);
+                    $("#editCategoryModal").show();
+                });
+
+                $(".del_category_btn").click(function() {
+                    var id = $(this).data("id");
+                    if (confirm("Are you sure you want to Delete this Category?")) {
+                        $.ajax({
+                            url: "http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/categories/delete/" + id,
+                            type: "DELETE",
+                            success: function() {
+                                // Remove the row from the table
+                                $(this).closest("tr").remove();
+                                // Reload the page
+                                alert("Category Deleted.");
+                                location.reload();
+                            },
+                            error: function() {
+                                alert("Error Deleting category.");
+                            }
+                        });
+                    }
+                });
             }
         };
         xhttp.open("GET", "http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/categories", true);
         xhttp.send();
     }
 
-    function deleteCategory(id) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 204) {
-                loadCategory();
-            }
-        };
-        xhttp.open("DELETE", "http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/categories/" + id, true);
-        xhttp.send();
-    }
+    $("#cancelCategoryBtn").click(function() {
+        $("#editCategoryModal").hide();
+    });
+
 </script>
+
 </body>
 </html>

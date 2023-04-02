@@ -312,7 +312,7 @@
     <input type="text" id="categoryName" name="categoryName">
     <div class="button-container">
         <input type="submit" value="Insert Category">
-        <button class="back-button" onclick="window.location.href = 'ManageCategory.jsp'; return false;">Back</button>
+        <button class="back-button" onclick="window.location.href = 'ManageCategories.jsp'; return false;">Back</button>
     </div>
     <input type="hidden" name="message" value="${message}">
 </form>
