@@ -9,19 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e851a4e-5cb3-42c5-a897-88df6005fef9" name="Changes" comment="feat: Add &quot;CategoryServlet&quot; to send POST request to the backend API for adding new category">
+    <list default="true" id="8e851a4e-5cb3-42c5-a897-88df6005fef9" name="Changes" comment="Add &quot;EditCategoryServlet&quot; for editing categories via REST API call.">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/EditCategoryServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/AddBrandServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/EditBrandServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/AddBrand.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/AdminProfile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ManageBrands.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ManageProducts.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../REST/.idea/REST.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Advanced Programming_CL.BSCSD.25.35_(st20267804).docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modifications" beforeDir="false" afterPath="$PROJECT_DIR$/Modifications" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bumblebeeloanapplicationui/RegistrationServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/AddCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AddCategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/AdminDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AdminDashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManageCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManageCategories.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ViewUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ViewUsers.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +33,8 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -203,7 +203,7 @@
       <workItem from="1680288410694" duration="18000" />
       <workItem from="1680332031536" duration="29410000" />
       <workItem from="1680375568026" duration="5583000" />
-      <workItem from="1680412295141" duration="38133000" />
+      <workItem from="1680412295141" duration="48605000" />
     </task>
     <task id="LOCAL-00001" summary="Add functionality to load customer data from API endpoint">
       <created>1679896522937</created>
@@ -261,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680374847167</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add &quot;EditCategoryServlet&quot; for editing categories via REST API call.">
+      <created>1680459234144</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680459234144</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +294,7 @@
     <MESSAGE value="Design Admin Dashboard and Customer Dashboard" />
     <MESSAGE value="feat: Add customer details page with AJAX request to load customer data" />
     <MESSAGE value="feat: Add &quot;CategoryServlet&quot; to send POST request to the backend API for adding new category" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add &quot;CategoryServlet&quot; to send POST request to the backend API for adding new category" />
+    <MESSAGE value="Add &quot;EditCategoryServlet&quot; for editing categories via REST API call." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add &quot;EditCategoryServlet&quot; for editing categories via REST API call." />
   </component>
 </project>
