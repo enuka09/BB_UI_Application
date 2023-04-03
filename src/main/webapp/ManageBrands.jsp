@@ -374,6 +374,7 @@
 </div>
 
 <script>
+
     function loadBrand() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -390,6 +391,7 @@
                     nameCell.innerHTML = brandData[i].name;
                     actionsCell.innerHTML = '<button class="edit_brand_btn" data-id="' + brandData[i].id + '">Edit</button> <button class="del_brand_btn" data-id="' + brandData[i].id + '">Delete</button>' ;
                 }
+
                 $(".edit_brand_btn").click(function() {
                     var id = $(this).data("id");
                     var name = $(this).closest("tr").find("td:eq(1)").text();
@@ -423,7 +425,7 @@
         xhttp.send();
     }
 
-    $("#cancelCategoryBtn").click(function() {
+    $("#cancelBrandBtn").click(function() {
         $("#editBrandModal").hide();
     });
 

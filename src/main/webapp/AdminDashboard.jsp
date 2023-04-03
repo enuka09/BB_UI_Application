@@ -224,7 +224,7 @@
     <a href="ViewUsers.jsp"><i class='fa-solid fa-people-roof'></i><span style='display:inline-block; margin-left: 10px;'>Manage Users</span></a>
 
     <div class="bottom-icon">
-      <a href="#profile"><i class="fa-solid fa-right-from-bracket"></i><span style='display:inline-block; margin-left: 10px;'>Logout</span></a>
+      <a href="AdminLogin.jsp"><i class='fa-solid fa-right-from-bracket'></i><span style='display:inline-block; margin-left: 10px;'>Logout</span></a>
     </div>
   </div>
 

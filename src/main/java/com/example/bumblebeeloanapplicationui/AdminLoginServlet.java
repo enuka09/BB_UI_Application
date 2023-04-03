@@ -54,8 +54,14 @@ public class AdminLoginServlet extends HttpServlet {
             responseBody = br.lines().collect(Collectors.joining("\n"));
             br.close();
 
+            //Create  a session and set username attribute
+//            HttpSession session = request.getSession();
+//            session.setAttribute("admin", username);
+
             HttpSession session = request.getSession();
-            session.setAttribute("admin", username); // set session attribute
+            session.setAttribute("username", username);
+
+
             Cookie emailCookie = new Cookie("admin_username", username);
             emailCookie.setMaxAge(24*60*60);
             response.addCookie(emailCookie);

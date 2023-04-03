@@ -1,9 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Manage Category</title>
+    <title>Manage Products</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
@@ -46,7 +45,8 @@
         }
 
         .search_box{
-            margin-left: 480px;
+            width: 800px;
+            margin-left: 950px;
             margin-top: -50px;
             display: flex;
             align-items: center;
@@ -153,7 +153,7 @@
             margin-left: -10px;
         }
 
-        .add_category_btn {
+        .add_product_btn {
             display: inline-block;
             padding: 10px 20px;
             background-color: #0B9394;
@@ -166,7 +166,7 @@
             cursor: pointer;
         }
 
-        .add_category_btn:hover {
+        .add_product_btn:hover {
             background-color: #087576;
         }
 
@@ -177,11 +177,10 @@
             padding: 1rem;
         }
 
-
         table {
             margin-left: 280px;
             margin-top: 10px;
-            width: 50%;
+            width: 80%;
             border-collapse: collapse;
             border-radius: 10px;
             overflow: hidden;
@@ -213,7 +212,7 @@
             border-bottom: 2px solid #dee2e6;
         }
 
-        .del_category_btn {
+        .del_product_btn {
             background-color: #CC0000;
             border: none;
             color: white;
@@ -227,11 +226,12 @@
             border-radius: 10px;
         }
 
-        .del_category_btn:hover {
+        .del_product_btn:hover {
             background-color: #A30000;
         }
 
-        .edit_category_btn {
+        .edit-btn {
+            width: 90px;
             background-color: #8FCE00;
             border: none;
             color: white;
@@ -245,7 +245,7 @@
             border-radius: 10px;
         }
 
-        .edit_category_btn:hover {
+        .edit-btn:hover {
             background-color: #72A400;
         }
 
@@ -296,12 +296,10 @@
         .cancel-btn:hover{
             background: #888888;
         }
-
-
-
     </style>
 </head>
-<body onload="loadCategory()">
+
+<body onload="loadProduct()">
 
 <header class="header">
     <div class="logo">
@@ -320,11 +318,11 @@
     <div class="sidebarnew">
         <span style="color: #9DD3D4">Menu</span>
         <a href="AdminDashboard.jsp"><i class='fa fa-home'></i><span style='display:inline-block; margin-left: 10px;'>Home</span></a>
-        <a href="ManageProducts.jsp"><i class='fa-solid fa-bag-shopping'></i><span style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
-        <a href="ManageBrands.jsp"><i class="fa-solid fa-ring"></i><span style='display:inline-block; margin-left: 10px;'>Manage Brands</span></a>
         <div class="selected-icon">
-            <i class='fa-solid fa-store' style="margin-left: 15px; margin-top: 30px"></i><span style='display:inline-block; margin-left: 10px; margin-top: -100px; color: #ffffff;'>Manage Category</span>
+            <i class='fa-solid fa-bag-shopping' style="margin-left: 15px; margin-top: 30px"></i><span style='display:inline-block; margin-left: 10px; margin-top: -100px; color: #ffffff;'>Manage Products</span>
         </div>
+        <a href="ManageBrands.jsp"><i class="fa-solid fa-ring"></i><span style='display:inline-block; margin-left: 10px;'>Manage Brands</span></a>
+        <a href="ManageCategories.jsp"><i class='fa-solid fa-store'></i><span style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
         <a href="ViewUsers.jsp"><i class='fa-solid fa-people-roof'></i><span style='display:inline-block; margin-left: 10px;'>Manage Users</span></a>
 
 
@@ -337,10 +335,10 @@
 <div class="main-body">
 
     <div class="promo_card">
-        <h1 style="margin-left:0px;">CATEGORY DETAILS</h1>
+        <h1 style="margin-left:0px;">PRODUCT DETAILS</h1>
     </div>
     <div class="control-btn">
-        <button class="add_category_btn" onclick="window.location.href = 'AddCategory.jsp'">Add New Category</button>
+        <button class="add_product_btn" onclick="window.location.href = 'AddProduct.jsp'">Add New Product</button>
 
         <div class="search_box">
             <input type="text" placeholder="Search Here">
@@ -352,83 +350,108 @@
 <table>
     <thead>
     <tr class="border-bottom border-top">
-        <th class="border-right">Category ID</th>
-        <th class="border-right">Category Name</th>
+        <th class="border-right">ID</th>
+        <th class="border-right">Name</th>
+        <th class="border-right">Price</th>
+        <th class="border-right">Description</th>
+        <th class="border-right">Category</th>
+        <th class="border-right">Brand</th>
+        <th class="border-right">Quantity</th>
         <th class="border-right">Actions</th>
     </tr>
     </thead>
-    <tbody id="categoryTable"></tbody>
+    <tbody id="productTable"></tbody>
 </table>
 
-<div class="edit-form" id="editCategoryModal" style="display:none">
-    <h2 style="margin-bottom: 30px; padding-top: 30px">Edit Category</h2>
-    <form id="editCategoryForm" action="${pageContext.request.contextPath}/editCategory" method="POST">
-        <label for="categoryId">Category ID:</label>
-        <input type="text" id="categoryId" name="categoryId"><br><br>
-        <label for="categoryName" style="background: none; border: #959595;">Category Name:</label>
-        <input type="text" id="categoryName" name="categoryName" style="border: 1px solid black; padding-left: 10px;">
-        <button type="submit" id="saveCategoryBtn" name="saveCategoryBtn" class="save-btn">Save</button>
-        <button type="button" id="cancelCategoryBtn" class="cancel-btn">Cancel</button>
+<div class="edit-form" id="editProductModal" style="display:none">
+    <h2 style="margin-bottom: 30px; padding-top: 30px">Edit Product</h2>
+    <form id="editProductForm" action="${pageContext.request.contextPath}/editProduct" method="POST">
+
+        <label for="productId">Product ID:</label>
+        <input type="text" id="productId" name="productId"><br><br>
+
+        <label for="productName" style="background: none; border: #959595;">Product Name:</label>
+        <input type="text" id="productName" name="productName" style="border: 1px solid black; padding-left: 10px;">
+
+        <label for="productPrice" style="background: none; border: #959595;">Product Price:</label>
+        <input type="text" id="productPrice" name="productPrice" style="border: 1px solid black; padding-left: 10px;">
+
+        <label for="productDescription" style="background: none; border: #959595;">Product Description:</label>
+        <input type="text" id="productDescription" name="productDescription" style="border: 1px solid black; padding-left: 10px;">
+
+        <label for="productCategory" style="background: none; border: #959595;">Category:</label>
+        <input type="text" id="productCategory" name="productCategory" style="border: 1px solid black; padding-left: 10px;">
+
+        <label for="productBrand" style="background: none; border: #959595;">Brand:</label>
+        <input type="text" id="productBrand" name="productBrand" style="border: 1px solid black; padding-left: 10px;">
+
+        <label for="productQuantity" style="background: none; border: #959595;">Quantity:</label>
+        <input type="text" id="productQuantity" name="productQuantity" style="border: 1px solid black; padding-left: 10px;">
+
+        <button type="submit" id="saveProductBtn" name="saveProductBtn" class="save-btn">Save</button>
+        <button type="button" id="cancelProductBtn" class="cancel-btn">Cancel</button>
         <input type="hidden" name="message" value="${message}">
     </form>
 
 </div>
 
 <script>
-    function loadCategory() {
+
+    function loadProduct() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                var categoryData = JSON.parse(this.responseText);
-                var categoryTable = document.getElementById("categoryTable");
-                categoryTable.innerHTML = "";
-                for (var i = 0; i < categoryData.length; i++) {
-                    var row = categoryTable.insertRow(i);
+                var productData = JSON.parse(this.responseText);
+                var productTable = document.getElementById("productTable");
+                productTable.innerHTML = "";
+                for (var i = 0; i < productData.length; i++) {
+                    var row = productTable.insertRow(i);
                     var idCell = row.insertCell(0);
                     var nameCell = row.insertCell(1);
-                    var actionsCell = row.insertCell(2);
-                    idCell.innerHTML = categoryData[i].id;
-                    nameCell.innerHTML = categoryData[i].name;
-                    actionsCell.innerHTML = '<button class="edit_category_btn" data-id="' + categoryData[i].id + '">Edit</button> <button class="del_category_btn" data-id="' + categoryData[i].id + '">Delete</button>' ;
-                }
-                $(".edit_category_btn").click(function() {
-                    var id = $(this).data("id");
-                    var name = $(this).closest("tr").find("td:eq(1)").text();
-                    $("#categoryId").val(id);
-                    $("#categoryName").val(name);
-                    $("#editCategoryModal").show();
-                });
+                    var priceCell = row.insertCell(2);
+                    var descriptionCell = row.insertCell(3);
+                    var categoryCell = row.insertCell(4);
+                    var brandCell = row.insertCell(5);
+                    var quantityCell = row.insertCell(6);
+                    var actionsCell = row.insertCell(7);
+                    idCell.innerHTML = productData[i].id;
+                    nameCell.innerHTML = productData[i].name;
+                    priceCell.innerHTML = productData[i].price;
+                    descriptionCell.innerHTML = productData[i].description;
+                    categoryCell.innerHTML = productData[i].category;
+                    brandCell.innerHTML = productData[i].brand;
+                    quantityCell.innerHTML = productData[i].quantity;
+                    actionsCell.innerHTML = '<div class="edit-btn"><a href="EditProducts.jsp?' + $.param(productData[i]) + '">Edit</a></div>  <button class="del_product_btn" data-id="' + productData[i].id + '">Delete</button>';
 
-                $(".del_category_btn").click(function() {
+                }
+
+
+                $(".del_product_btn").click(function() {
                     var id = $(this).data("id");
-                    if (confirm("Are you sure you want to Delete this Category?")) {
+                    if (confirm("Are you sure you want to Delete this Product?")) {
                         $.ajax({
-                            url: "http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/categories/delete/" + id,
+                            url: "http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/products/delete/" + id,
                             type: "DELETE",
                             success: function() {
                                 // Remove the row from the table
                                 $(this).closest("tr").remove();
                                 // Reload the page
-                                alert("Category Deleted.");
+                                alert("Product Deleted.");
                                 location.reload();
                             },
                             error: function() {
-                                alert("Error Deleting category.");
+                                alert("Error Deleting Product.");
                             }
                         });
                     }
                 });
             }
-        };
-        xhttp.open("GET", "http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/categories", true);
-        xhttp.send();
-    }
 
-    $("#cancelCategoryBtn").click(function() {
-        $("#editCategoryModal").hide();
-    });
-
-
+            };
+            xhttp.open("GET", "http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/products", true);
+            xhttp.send();
+        }
+        loadProduct();
 </script>
 
 </body>

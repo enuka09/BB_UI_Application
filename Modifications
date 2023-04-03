@@ -22,4 +22,7 @@ Id   |  Date        |  Remark
 014  |  02/04/2023  |  Add delete category functionality and confirmation message in "ManageCategory"
 015  |  02/04/2023  |  Add Edit category functionality via REST API call
 
+016  |  03/04/2023  |  Create AddProduct and EditProduct Servlets
+017  |  03/04/2023  |  Design all Product Management Functionalities
+
 
