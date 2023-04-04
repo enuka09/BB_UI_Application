@@ -54,10 +54,6 @@ public class AdminLoginServlet extends HttpServlet {
             responseBody = br.lines().collect(Collectors.joining("\n"));
             br.close();
 
-            //Create  a session and set username attribute
-//            HttpSession session = request.getSession();
-//            session.setAttribute("admin", username);
-
             HttpSession session = request.getSession();
             session.setAttribute("username", username);
 

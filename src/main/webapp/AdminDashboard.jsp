@@ -147,7 +147,7 @@
     }
 
     .promo_card{
-      width: 1150px;
+      width: 1200px;
       color: #fff;
       margin-top: 10px;
       border-radius: 8px;
@@ -177,8 +177,11 @@
     }
 
     table{
+      margin-left: 270px;
+    width:1200px;
       background: #fff;
       padding: 1rem;
+      margin-top: 50px;
       text-align: left;
       border-radius: 10px;
     }
@@ -208,7 +211,7 @@
     <span style='color: #0B9394;'><i class="fas fa-bell"></i></span>
     <div class="account">
       <a href="AdminProfile.jsp"> <img src="Images/admin-profile.jpg" alt="admin-img"></a>
-      <h4>&nbsp&nbspEnuka&nbsp&nbspPinsara</h4>
+      <h4><%=session.getAttribute("username")%></h4>
     </div>
   </div>
 </header>
@@ -224,7 +227,11 @@
     <a href="ViewUsers.jsp"><i class='fa-solid fa-people-roof'></i><span style='display:inline-block; margin-left: 10px;'>Manage Users</span></a>
 
     <div class="bottom-icon">
-      <a href="AdminLogin.jsp"><i class='fa-solid fa-right-from-bracket'></i><span style='display:inline-block; margin-left: 10px;'>Logout</span></a>
+      <a href="#" onclick="confirmLogout();"><i class='fa-solid fa-right-from-bracket'></i><span style='display:inline-block; margin-left: 10px;'>Logout</span></a>
+
+
+
+    <%--      <a href="AdminLogin.jsp"><i class='fa-solid fa-right-from-bracket'></i><span style='display:inline-block; margin-left: 10px;'>Logout</span></a>--%>
     </div>
   </div>
 
@@ -235,151 +242,102 @@
       <span>Buy First | Pay Later</span>
       <button>Learn More</button>
     </div>
-
-    <div class="history_lists">
-      <div class="list1">
-        <div class="row">
-          <h4>History</h4>
-          <a href="#">See all</a>
-        </div>
-        <table>
-          <thead>
-          <tr>
-            <th>#</th>
-            <th>Dates</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Ammount</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>1</td>
-            <td>2, Aug, 2022</td>
-            <td>Sam Tonny</td>
-            <td>Premimum</td>
-            <td>$2000.00</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>29, July, 2022</td>
-
-            <td>Code Info</td>
-            <td>Silver</td>
-            <td>$5,000.00</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>15, July, 2022</td>
-
-            <td>Jhon David</td>
-            <td>Startup</td>
-            <td>$3000.00</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>5, July, 2022</td>
-            <td>Salina Gomiz</td>
-            <td>Premimum</td>
-            <td>$7000.00</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>29, June, 2022</td>
-            <td>Gomiz</td>
-            <td>Gold</td>
-            <td>$4000.00</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>28, June, 2022</td>
-            <td>Elyana Jhon</td>
-            <td>Premimum</td>
-            <td>$2000.00</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="list2">
-        <div class="row">
-          <h4>Documnets</h4>
-          <a href="#">Upload</a>
-        </div>
-        <table>
-          <thead>
-          <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Type</th>
-            <th>Uplaoded</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>1</td>
-            <td>CNIC</td>
-            <td>PDF</td>
-            <td>20</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Passport</td>
-            <td>PDF</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Licence</td>
-            <td>PDF</td>
-            <td>9</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Pic</td>
-            <td>Jpg</td>
-            <td>22</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>CNIC</td>
-            <td>Jpg</td>
-            <td>22</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Docx</td>
-            <td>Word</td>
-            <td>22</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
   </div>
 </div>
+    <table>
+      <thead>
+      <tr class="border-bottom border-top">
+        <th class="border-right">ID</th>
+        <th class="border-right">Name</th>
+        <th class="border-right">Price</th>
+        <th class="border-right">Description</th>
+        <th class="border-right">Category</th>
+        <th class="border-right">Brand</th>
+        <th class="border-right">Quantity</th>
+      </tr>
+      </thead>
+      <tbody id="productTable"></tbody>
+    </table>
 
 
 
-<script>
-  const url = 'http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/customer';
-  const customerData = document.getElementById('customerData');
-  const loadButton = document.getElementById('idLoad');
+    <script>
 
-  loadButton.addEventListener('click', function() {
-    fetch(url)
-            .then(response => response.json())
-            .then(data => {
-              try {
-                customerData.value = JSON.stringify(data);
-                document.getElementById('customerForm').submit();
-              } catch (error) {
-                console.error(error);
-              }
-            })
-            .catch(error => console.error(error));
-  });
-</script>
+      function loadProduct() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var productData = JSON.parse(this.responseText);
+            var productTable = document.getElementById("productTable");
+            productTable.innerHTML = "";
+            for (var i = 0; i < productData.length; i++) {
+              var row = productTable.insertRow(i);
+              var idCell = row.insertCell(0);
+              var nameCell = row.insertCell(1);
+              var priceCell = row.insertCell(2);
+              var descriptionCell = row.insertCell(3);
+              var categoryCell = row.insertCell(4);
+              var brandCell = row.insertCell(5);
+              var quantityCell = row.insertCell(6);
+              var actionsCell = row.insertCell(7);
+              idCell.innerHTML = productData[i].id;
+              nameCell.innerHTML = productData[i].name;
+              priceCell.innerHTML = productData[i].price;
+              descriptionCell.innerHTML = productData[i].description;
+              categoryCell.innerHTML = productData[i].category;
+              brandCell.innerHTML = productData[i].brand;
+              quantityCell.innerHTML = productData[i].quantity;
+
+            }
+
+
+
+          }
+
+        };
+        xhttp.open("GET", "http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/products", true);
+        xhttp.send();
+      }
+      loadProduct();
+
+
+
+
+
+
+const url = 'http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/customer';
+      const customerData = document.getElementById('customerData');
+      const loadButton = document.getElementById('idLoad');
+
+      var username = "<%=session.getAttribute("username")%>";
+      alert("Welcome, " + username + "!");
+
+      loadButton.addEventListener('click', function() {
+        fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                  try {
+                    customerData.value = JSON.stringify(data);
+                    document.getElementById('customerForm').submit();
+                  } catch (error) {
+                    console.error(error);
+                  }
+                })
+                .catch(error => console.error(error));
+      });
+
+      var username = "<%=session.getAttribute("username")%>";
+      alert("Welcome, " + username + "!");
+
+
+        function confirmLogout() {
+        var confirmed = confirm("Are you sure you want to exit?");
+        if (confirmed) {
+        window.location.href = "AdminLogin.jsp";
+      }
+      }
+
+    </script>
 
 
 </body>

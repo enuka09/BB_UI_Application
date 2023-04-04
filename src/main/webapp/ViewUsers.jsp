@@ -150,6 +150,27 @@
             width: 70%;
             padding: 1rem;
         }
+        .control-btn{
+            margin-top: 20px;
+            margin-left: -10px;
+        }
+
+        .view_loan_details {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0B9394;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .view_loan_details:hover {
+            background-color: #087576;
+        }
 
 
         table {
@@ -229,7 +250,10 @@
     <div class="promo_card">
         <h2>Customer Details</h2>
     </div>
+    <div class="control-btn">
+        <button class="view_loan_details" onclick="window.location.href = 'ViewPurchaseDetails.jsp'">View Loan Details</button></div>
 </div>
+
 <table>
     <thead>
     <tr class="border-bottom border-top">

@@ -241,11 +241,17 @@
       <label for="productDescription">Description:</label>
       <input type="text" id="productDescription" name="productDescription" value="${param.description}">
 
+<%--      <label for="productCategory">Category:</label>--%>
+<%--      <input type="text" id="productCategory" name="productCategory" value="${param.category}">--%>
+
+<%--      <label for="productBrand">Brand:</label>--%>
+<%--      <input type="text" id="productBrand" name="productBrand" value="${param.brand}">--%>
+
       <label for="productCategory">Category:</label>
-      <input type="text" id="productCategory" name="productCategory" value="${param.category}">
+      <select id="productCategory" name="productCategory"></select><br>
 
       <label for="productBrand">Brand:</label>
-      <input type="text" id="productBrand" name="productBrand" value="${param.brand}">
+      <select id="productBrand" name="productBrand"></select><br>
 
       <label for="productQuantity">Quantity:</label>
       <input type="text" id="productQuantity" name="productQuantity" value="${param.quantity}"><br><br>
@@ -261,6 +267,38 @@
   $("#cancelProductBtn").click(function() {
     window.history.back();
   });
+
+
+  const productCategoryDropdown = document.getElementById('productCategory');
+
+  fetch('http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/categories')
+          .then(response => response.json())
+          .then(data => {
+            data.forEach(category => {
+              const option = document.createElement('option');
+              option.value = category.name;
+              option.text = category.name;
+              productCategoryDropdown.appendChild(option);
+            });
+
+            document.getElementById('productCategory').value = "${param.category}";
+          });
+
+  const productBrandDropdown = document.getElementById('productBrand');
+
+  fetch('http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/brands')
+          .then(response => response.json())
+          .then(data => {
+            data.forEach(brand => {
+              const option = document.createElement('option');
+              option.value = brand.name;
+              option.text = brand.name;
+              productBrandDropdown.appendChild(option);
+            });
+
+            document.getElementById('productBrand').value = "${param.brand}";
+          });
+
 </script>
 </body>
 </html>

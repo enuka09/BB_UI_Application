@@ -178,21 +178,28 @@
         </div>
     </div>
 
-<script>
+    <script>
     var state = false;
     function toggle(){
-        if (state){
-            document.getElementById("password").setAttribute("type", "password");
-            state = false;
+    if (state){
+    document.getElementById("txtloginpassword").setAttribute("type", "password");
+    state = false;
 
-        }
-        else{
-            document.getElementById("password").setAttribute("type", "text");
-            state = true;
-        }
     }
-</script>
+    else{
+    document.getElementById("txtloginpassword").setAttribute("type", "text");
+    state = true;
+    }
+    }
 
-
+    function validateForm() {
+    var x = document.forms["form"]["username"].value;
+    var y = document.forms["form"]["password"].value;
+    if (x == "" || y == "") {
+    document.getElementById("errorMessage").style.display = "block";
+    return false;
+    }
+    }
+    </script>
 </body>
 </html>

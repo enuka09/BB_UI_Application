@@ -167,7 +167,7 @@
             <input type="text" name="lastname" id="txtlastName" class="form-input" placeholder="Last Name" required>
             <input type="text" name="username" id="txtusername" class="form-input" placeholder="Username" required>
             <input type="password" name="password" id="txtpassword" class="form-input" placeholder="Password" required>
-            <input type="password" class="form-input" placeholder="Confirm Password" required>
+            <input type="password" id="txtconfirmpassword" class="form-input" placeholder="Confirm Password" required>
             <input type="text" name="nic" id="txtnic" class="form-input" placeholder="NIC Number" required>
             <input type="date" name="dob"  id="txtdob" class="form-input" placeholder="Select DOB" required>
             <button id="idAdd" name="register" class="form-button-reg" onclick="submitForm()">REGISTER</button>
@@ -186,9 +186,34 @@
         const lastName = document.getElementById("txtlastName").value;
         const username = document.getElementById("txtusername").value;
         const password = document.getElementById("txtpassword").value;
+        const confirmPassword = document.getElementById("txtconfirmpassword").value;
         const nic = document.getElementById("txtnic").value;
         const dob = document.getElementById("txtdob").value;
+        const minAge = 18;
 
+        // Check if all required fields are filled
+        if (!firstName || !lastName || !username || !password || !confirmPassword || !nic || !dob) {
+            alert("Please fill in all required fields.");
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            alert("Password and confirm password fields do not match.");
+            return;
+        }
+
+        // Check if user is at least minAge years old
+        const today = new Date();
+        const birthDate = new Date(dob);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        if (age < minAge) {
+            alert("You must be at least " + minAge + " years old to register.");
+            return;
+        }
 
         const customer = {
             firstname: firstName,
@@ -220,6 +245,7 @@
             .catch(error =>
                 console.error('Error registering customer:', error));
     }
+
 </script>
 
 </body>

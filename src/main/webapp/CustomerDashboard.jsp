@@ -21,6 +21,41 @@
             min-height: 100%;
             background: #DBF8F8;
         }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
+            margin-top: -400px;
+            margin-left: 300px ;
+            padding: 20px 200px;
+        }
+        .product-card {
+            background: #F4FCFC;
+            border: none;
+            box-shadow: 0px 0px 10px #cccccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .price {
+            font-weight: bold;
+            color: #54B3B4;
+            margin-top: 10px;
+        }
+        .buy-button {
+            background-color: #0B9394;
+            color: #fff;
+            border: none;
+            padding: 5px 30px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+        }
+        .buy-button:hover {
+            background-color: #087576;
+        }
         nav {
             position: fixed;
             overflow: hidden;
@@ -84,25 +119,21 @@
             outline: none;
             height: 40px;
         }
-        .cart{
+        .profile{
             display: flex;
-            background-color: white;
             justify-content: space-between;
-            margin-left: 290px;
+            margin-left: 250px;
             padding: 7px 10px;
             border-radius: 3px;
-            width: 80px;
-            font-size: 18px;
+            width: 100px;
+            font-size: 30px;
         }
-        .cart p{
-            height: 22px;
-            width: 22px;
+        .profile p{
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 22px;
-            background-color: #54B3B4;
             color: white;
+            margin-left: 10px;
         }
 
         .sidebar {
@@ -202,7 +233,9 @@
         }
         .header{
             background-color: #54B3B4;
-            width: 100%;
+            width: 80%;
+            margin-top: -300px;
+            margin-left: 150px;
 
         }
         .header h2{
@@ -308,7 +341,7 @@
             <input type="search" placeholder="Search...">
             <i class="fa-solid fa-magnifying-glass" style="color: #0b9394;"></i>
         </div>
-        <div class="cart"><i class="fa-solid fa-cart-shopping" style="color: #0b9394;"></i><p>0</p></div>
+        <div class="profile"><i class="fa-solid fa-circle-user" style="color: #ffffff;"></i><p><%=session.getAttribute("username")%></p></div>
     </div>
     </div>
 
@@ -354,7 +387,7 @@
 
                 <div class="bottom-cotent">
                     <li class="list">
-                        <a href="#" class="nav-link">
+                        <a href="#" onclick="logout()" class="nav-link">
                             <i class="bx bx-log-out icon"></i>
                             <span class="link">Logout</span>
                         </a>
@@ -371,203 +404,81 @@
         <h2>ALL ITEMS</h2>
     </div>
 
-    <div class="products">
-
-        <div class="product">
-            <div class="image">
-                <img src="Images/Products/product1.jpg" alt="product1">
-            </div>
-            <div class="namePrice">
-                <h3>Headset</h3>
-                <span>LKR 6,000</span>
-            </div>
-            <p>Headphones Type Closed dynamic Driver Diameter 40 mm Frequency</p>
-            <div class="stars">
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-regular fa-star" style="color:#54B3B4;"></i>
-            </div>
-            <div class="bay">
-                <button>  Buy now </button>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="image">
-                <img src="Images/Products/product2.jpg" alt="product2">
-            </div>
-            <div class="namePrice">
-                <h3>Camera</h3>
-                <span>LKR 10,000</span>
-            </div>
-            <p>Integrated WiFi - control camera from smart device</p>
-            <div class="stars">
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-            </div>
-            <div class="bay">
-                <button> Buy now </button>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="image">
-                <img src="Images/Products/product3.jpg" alt="product3">
-            </div>
-            <div class="namePrice">
-                <h3>Helmet</h3>
-                <span>LKR 5,500</span>
-            </div>
-            <p>Multi-Purpose Half Helmet for Men, Women (Sage Square)</p>
-            <div class="stars">
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-regular fa-star" style="color:#54B3B4;"></i>
-            </div>
-            <div class="bay">
-                <button> Buy now </button>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="image">
-                <img src="Images/Products/product7.jpg" alt="product4">
-            </div>
-            <div class="namePrice">
-                <h3>Mouse</h3>
-                <span>LKR 3,000</span>
-            </div>
-            <p>Kensington Pro Fit Wireless Mobile Mouse. 2.4GHz wireless</p>
-            <div class="stars">
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-regular fa-star" style="color:#54B3B4;"></i>
-            </div>
-            <div class="bay">
-                <button>  Buy now </button>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="image">
-                <img src="Images/Products/product4.jpg" alt="product4">
-            </div>
-            <div class="namePrice">
-                <h3>Ear Buds</h3>
-                <span>LKR 11,000</span>
-            </div>
-            <p>Headphones Type Closed dynamic Driver Diameter 40 mm Frequency</p>
-            <div class="stars">
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-            </div>
-            <div class="bay">
-                <button>  Buy now </button>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="image">
-                <img src="Images/Products/product5.jpg" alt="product5">
-            </div>
-            <div class="namePrice">
-                <h3>Watch</h3>
-                <span>LKR 12,000</span>
-            </div>
-            <p>Series 6 44MM Gold Aluminum GPS, Pink Sand Sport Band</p>
-            <div class="stars">
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-            </div>
-            <div class="bay">
-                <button>  Buy now </button>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="image">
-                <img src="Images/Products/product6.jpg" alt="product6">
-            </div>
-            <div class="namePrice">
-                <h3>Lamp</h3>
-                <span>LKR 4,000</span>
-            </div>
-            <p>Moffatt 95040 Task Lamp Incandescent Type Quick Coupler</p>
-            <div class="stars">
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-regular fa-star" style="color:#54B3B4;"></i>
-            </div>
-            <div class="bay">
-                <button>  Buy now </button>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="image">
-                <img src="Images/Products/product9.jpg" alt="product5">
-            </div>
-            <div class="namePrice">
-                <h3>Sunglass</h3>
-                <span>LKR 9,000</span>
-            </div>
-            <p>Fossil Non-Polarized Round Female's Sunglasses (Gold)</p>
-            <div class="stars">
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-regular fa-star" style="color:#54B3B4;"></i>
-            </div>
-            <div class="bay">
-                <button>  Buy now </button>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="image">
-                <img src="Images/Products/product8.jpg" alt="product8">
-            </div>
-            <div class="namePrice">
-                <h3>Mic</h3>
-                <span>LKR 7,000</span>
-            </div>
-            <p>Designed for home audio recording, music and sound projects</p>
-            <div class="stars">
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-                <i class="fa-solid fa-star" style="color:#54B3B4;"></i>
-            </div>
-            <div class="bay">
-                <button>  Buy now </button>
-            </div>
-        </div>
-    </div>
+</div>
+<%--<section class="overlay"></section>--%>
+<div class="grid-container">
+    <!-- Repeat this product card for each product in your dataset -->
+    <div class="product-cards left"></div>
+    <div class="product-cards right"></div>
 </div>
 
+<div id="buyModal" style="display:none;">
+    <p>Are you sure you want to buy this?</p>
+</div>
+
+<script>
+    function loadProducts() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var productData = JSON.parse(this.responseText);
+                var productCardsLeftContainer = document.querySelector(".product-cards.left");
+                var productCardsRightContainer = document.querySelector(".product-cards.right");
+
+                for (var i = 0; i < productData.length; i++) {
+                    var productCard = document.createElement("div");
+                    '<product-code>'
+                    productCard.className = "product-card";
+                    productCard.style.margin = "10px";
+                    productCard.innerHTML = '<h2>' + productData[i].name + '</h2>' +
+                        '<p>' + productData[i].description + '</p>' +
+                        '<p class="price">LKR&nbsp;' + productData[i].price + '</p>' +
+                        '<p style="display: none; margin-top: 10px;" class="id">' + productData[i].id + '</p>' +
+                        '<button class="buy-button" onclick="showBuyModal(this)">Buy</button>';
+
+                    if (i % 2 == 0) {
+                        productCardsLeftContainer.appendChild(productCard);
+                    } else {
+                        productCardsRightContainer.appendChild(productCard);
+                    }
+                }
+            }
+        };
+        xhttp.open("GET", "http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/products", true);
+        xhttp.send();
+    }
+    loadProducts();
 
 
-<section class="overlay"></section>
+
+    function showBuyModal(button) {
+        var productCard = button.parentElement;
+        var productId = productCard.querySelector(".id").innerHTML;
+        var buyModal = document.getElementById("buyModal");
+        if (confirm("Are you sure you want to buy this?")) {
+            window.location.href = "buy.jsp?id=" + productId;
+        }
+    }
+
+    var username = "<%=session.getAttribute("username")%>";
+    alert("Welcome, " + username + "!");
+
+    function confirmLogout() {
+        var confirmed = confirm("Are you sure you want to exit?");
+        if (confirmed) {
+            window.location.href = "UserLogin.jsp";
+        }
+    }
+
+    function logout() {
+        // perform logout action, e.g. by sending a logout request to the server
+        // ...
+
+        // redirect to logout page
+        window.location.href = "UserLogin.jsp";
+    }
+
+</script>
 
 </body>
 </html>
-

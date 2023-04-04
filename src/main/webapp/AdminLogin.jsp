@@ -159,7 +159,6 @@
     }
   </style>
 </head>
-
 <body>
 
 <div class="container">
@@ -178,6 +177,7 @@
   </div>
 </div>
 
+
 <script>
   var state = false;
   function toggle(){
@@ -192,7 +192,5 @@
     }
   }
 </script>
-
-
 </body>
 </html>
