@@ -27,4 +27,11 @@ Id   |  Date        |  Remark
 
 018  |  04/04/2023  |  Modify Customer Dashboard and Add new jsp as ViewPurchases to view  customer loan and purchase details
 
+019  |  05/04/2023  |  Implement Search Functionality in ViewUsers,  ViewPurchaseDetails, ViewCategories, ViewProducts and ViewBrands jsp pages
+020  |  05/04/2023  |  Add functionality to purchase products using loan amount, update loan balance, stock quantity and purchase product details
+
+021  |  06/04/2023  |  Add functionality to view relevant customer Loan Balance and Purchase Details
+
+
+
 

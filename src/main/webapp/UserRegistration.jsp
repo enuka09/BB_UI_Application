@@ -216,8 +216,8 @@
         }
 
         const customer = {
-            firstname: firstName,
-            lastname: lastName,
+            firstName: firstName,
+            lastName: lastName,
             username: username,
             password: password,
             nic: nic,

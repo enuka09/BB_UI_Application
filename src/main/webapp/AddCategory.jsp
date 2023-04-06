@@ -4,10 +4,11 @@
 <head>
     <title>Add New Category</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-        *{
+
+        * {
             margin: 0;
             padding: 0;
             border: none;
@@ -16,10 +17,12 @@
             box-sizing: border-box;
             font-family: "Poppins", sans-serif;
         }
-        body{
+
+        body {
             background: #DBF8F8;
         }
-        .header{
+
+        .header {
             width: 100%;
             margin-top: -10px;
             position: fixed;
@@ -31,7 +34,8 @@
             padding: 20px;
             background: #fff;
         }
-        .logo{
+
+        .logo {
             margin-left: 20px;
             display: flex;
             align-items: center;
@@ -42,28 +46,33 @@
             height: auto;
             margin-right: 1rem;
         }
-        .header-icons{
+
+        .header-icons {
             margin-right: 30px;
             display: flex;
             align-items: center;
         }
-        .header-icons i{
+
+        .header-icons i {
             margin-right: 2rem;
             cursor: pointer;
         }
-        .header-icons .account{
+
+        .header-icons .account {
             width: 130px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        .header-icons .account img{
+
+        .header-icons .account img {
             width: 35px;
             height: 35px;
             cursor: pointer;
             border-radius: 50%;
         }
-        .container{
+
+        .container {
             margin-top: 10px;
             display: flex;
             justify-content: space-between;
@@ -83,7 +92,7 @@
             border-radius: 5px;
         }
 
-        .bottom-icon{
+        .bottom-icon {
             margin-top: 150px;
         }
 
@@ -109,7 +118,7 @@
             display: block;
         }
 
-        .selected-icon{
+        .selected-icon {
             color: #ffffff;
             background: #0b9394;
             margin-left: 10px;
@@ -124,7 +133,7 @@
             padding: 6px 4px 6px 12px;
         }
 
-        .main-body{
+        .main-body {
             margin-top: 100px;
             margin-left: 380px;
             width: 70%;
@@ -200,7 +209,6 @@
         input[type=text] {
             font-size: 16px;
             padding: 10px;
-            /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);*/
             border-radius: 5px;
             margin-bottom: 20px;
             width: 100%;
@@ -283,16 +291,21 @@
     <div class="sidebarnew">
         <span style="color: #9DD3D4">Menu</span>
         <a href="AdminDashboard.jsp"><i class='fa fa-home'></i><span style='display:inline-block; margin-left: 10px;'>Home</span></a>
-        <a href="AdminProfile.jsp"><i class='fa-solid fa-address-card'></i><span style='display:inline-block; margin-left: 10px;'>Profile</span></a>
-        <a href="ManageProducts.jsp"><i class='fa-solid fa-bag-shopping'></i><span style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
+        <a href="AdminProfile.jsp"><i class='fa-solid fa-address-card'></i><span
+                style='display:inline-block; margin-left: 10px;'>Profile</span></a>
+        <a href="ManageProducts.jsp"><i class='fa-solid fa-bag-shopping'></i><span
+                style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
         <div class="selected-icon">
-            <i class='fa-solid fa-store' style="margin-left: 15px; margin-top: 30px"></i><span style='display:inline-block; margin-left: 10px; margin-top: -100px; color: #ffffff;'>Manage Category</span>
+            <i class='fa-solid fa-store' style="margin-left: 15px; margin-top: 30px"></i><span
+                style='display:inline-block; margin-left: 10px; margin-top: -100px; color: #ffffff;'>Manage Category</span>
         </div>
-        <a href="ViewUsers.jsp"><i class='fa-solid fa-people-roof'></i><span style='display:inline-block; margin-left: 10px;'>Manage Users</span></a>
+        <a href="ViewUsers.jsp"><i class='fa-solid fa-people-roof'></i><span
+                style='display:inline-block; margin-left: 10px;'>Manage Users</span></a>
 
 
         <div class="bottom-icon">
-            <a href="#profile"><i class="fa-solid fa-right-from-bracket"></i><span style='display:inline-block; margin-left: 10px;'>Logout</span></a>
+            <a href="#" onclick="confirmLogout();"><i class='fa-solid fa-right-from-bracket'></i><span
+                    style='display:inline-block; margin-left: 10px;'>Logout</span></a>
         </div>
     </div>
 </div>
@@ -305,7 +318,8 @@
     </div>
 </div>
 
-<form class="form" action="${pageContext.request.contextPath}/insertCategory" method="post" onsubmit="return validateForm()">
+<form class="form" action="${pageContext.request.contextPath}/insertCategory" method="post"
+      onsubmit="return validateForm()">
     <label for="categoryId">Category ID:</label>
     <input type="text" id="categoryId" name="categoryId">
     <label for="categoryName">Category Name:</label>
@@ -332,10 +346,18 @@
             return true;
         }
     }
-    window.onload = function() {
+
+    window.onload = function () {
         var message = "${message}";
         if (message) {
             alert(message);
+        }
+    }
+
+    function confirmLogout() {
+        var confirmed = confirm("Are you sure you want to exit?");
+        if (confirmed) {
+            window.location.href = "AdminLogin.jsp";
         }
     }
 </script>

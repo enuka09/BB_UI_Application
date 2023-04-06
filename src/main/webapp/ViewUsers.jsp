@@ -4,10 +4,11 @@
 <head>
     <title>Customer Details</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-        *{
+
+        * {
             margin: 0;
             padding: 0;
             border: none;
@@ -16,10 +17,12 @@
             box-sizing: border-box;
             font-family: "Poppins", sans-serif;
         }
-        body{
+
+        body {
             background: #DBF8F8;
         }
-        .header{
+
+        .header {
             width: 100%;
             margin-top: -10px;
             position: fixed;
@@ -31,7 +34,8 @@
             padding: 20px;
             background: #fff;
         }
-        .logo{
+
+        .logo {
             margin-left: 20px;
             display: flex;
             align-items: center;
@@ -43,19 +47,22 @@
             margin-right: 1rem;
         }
 
-        .search_box{
-            margin-left: 110px;
+        .search_box {
+            margin-left: 850px;
+            margin-top: -50px;
             display: flex;
             align-items: center;
         }
-        .search_box input{
+
+        .search_box input {
             padding: 9px;
-            width: 250px;
-            background: #DBF8F8;
+            width: 550px;
+            background: #ffffff;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
         }
-        .search_box i{
+
+        .search_box i {
             padding: 0.66rem;
             cursor: pointer;
             color: #fff;
@@ -63,28 +70,33 @@
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
         }
-        .header-icons{
+
+        .header-icons {
             margin-right: 30px;
             display: flex;
             align-items: center;
         }
-        .header-icons i{
+
+        .header-icons i {
             margin-right: 2rem;
             cursor: pointer;
         }
-        .header-icons .account{
+
+        .header-icons .account {
             width: 130px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        .header-icons .account img{
+
+        .header-icons .account img {
             width: 35px;
             height: 35px;
             cursor: pointer;
             border-radius: 50%;
         }
-        .container{
+
+        .container {
             margin-top: 10px;
             display: flex;
             justify-content: space-between;
@@ -104,7 +116,7 @@
             border-radius: 5px;
         }
 
-        .bottom-icon{
+        .bottom-icon {
             margin-top: 150px;
         }
 
@@ -130,7 +142,7 @@
             display: block;
         }
 
-        .selected-icon{
+        .selected-icon {
             color: #ffffff;
             background: #0b9394;
             margin-left: 10px;
@@ -144,13 +156,14 @@
             padding: 6px 4px 6px 12px;
         }
 
-        .main-body{
+        .main-body {
             margin-top: 80px;
-            margin-left: 270px;
+            margin-left: 315px;
             width: 70%;
             padding: 1rem;
         }
-        .control-btn{
+
+        .control-btn {
             margin-top: 20px;
             margin-left: -10px;
         }
@@ -174,7 +187,7 @@
 
 
         table {
-            margin-left: 280px;
+            margin-left: 330px;
             margin-top: 10px;
             width: 70%;
             border-collapse: collapse;
@@ -209,17 +222,10 @@
         }
     </style>
 </head>
-
 <body onload="loadCustomer()">
-
-
 <header class="header">
     <div class="logo">
         <img src="Images/logo.png" alt="logo">
-        <div class="search_box">
-            <input type="text" placeholder="Search Here">
-            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-        </div>
     </div>
 
     <div class="header-icons">
@@ -234,24 +240,34 @@
     <div class="sidebarnew">
         <span style="color: #9DD3D4">Menu</span>
         <a href="AdminDashboard.jsp"><i class='fa fa-home'></i><span style='display:inline-block; margin-left: 10px;'>Home</span></a>
-        <a href="ManageProducts.jsp"><i class='fa-solid fa-bag-shopping'></i><span style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
-        <a href="ManageBrands.jsp"><i class="fa-solid fa-ring"></i><span style='display:inline-block; margin-left: 10px;'>Manage Brands</span></a>
-        <a href="ManageCategories.jsp"><i class='fa-solid fa-store'></i><span style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
+        <a href="ManageProducts.jsp"><i class='fa-solid fa-bag-shopping'></i><span
+                style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
+        <a href="ManageBrands.jsp"><i class="fa-solid fa-ring"></i><span
+                style='display:inline-block; margin-left: 10px;'>Manage Brands</span></a>
+        <a href="ManageCategories.jsp"><i class='fa-solid fa-store'></i><span
+                style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
         <div class="selected-icon">
-            <i class='fa-solid fa-people-roof' style="margin-left: 20px; margin-top: 30px"></i><span style='display:inline-block; margin-left: 10px; color: #ffffff;'>Manage Users</span>
+            <i class='fa-solid fa-people-roof' style="margin-left: 20px; margin-top: 30px"></i><span
+                style='display:inline-block; margin-left: 10px; color: #ffffff;'>Manage Users</span>
         </div>
         <div class="bottom-icon">
-            <a href="#profile"><i class="fa-solid fa-right-from-bracket"></i><span style='display:inline-block; margin-left: 10px;'>Logout</span></a>
+            <a href="#" onclick="confirmLogout();"><i class='fa-solid fa-right-from-bracket'></i><span
+                    style='display:inline-block; margin-left: 10px;'>Logout</span></a>
         </div>
     </div>
 </div>
 <div class="main-body">
-
     <div class="promo_card">
         <h2>Customer Details</h2>
     </div>
     <div class="control-btn">
-        <button class="view_loan_details" onclick="window.location.href = 'ViewPurchaseDetails.jsp'">View Loan Details</button></div>
+        <button class="view_loan_details" onclick="window.location.href = 'ViewPurchaseDetails.jsp'">View Loan Details
+        </button>
+    </div>
+    <div class="search_box">
+        <input type="text" placeholder="Search Here" id="searchBox" oninput="searchCustomer()">
+        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+    </div>
 </div>
 
 <table>
@@ -264,6 +280,7 @@
         <th class="border-right">Password</th>
         <th class="border-right">NIC</th>
         <th class="border-right">Birth Date</th>
+        <th class="border-right">Loan Amount</th>
     </tr>
     </thead>
     <tbody id="customerTable"></tbody>
@@ -286,6 +303,7 @@
                     var passwordCell = row.insertCell(4);
                     var nicCell = row.insertCell(5);
                     var dobCell = row.insertCell(6);
+                    var loanAmountCell = row.insertCell(7);
                     idCell.innerHTML = customerData[i].id;
                     firstNameCell.innerHTML = customerData[i].firstName;
                     lastNameCell.innerHTML = customerData[i].lastName;
@@ -293,13 +311,22 @@
                     passwordCell.innerHTML = customerData[i].password;
                     nicCell.innerHTML = customerData[i].nic;
                     dobCell.innerHTML = customerData[i].dob;
+                    loanAmountCell.innerHTML = customerData[i].loanAmount;
                 }
             }
         };
         xhttp.open("GET", "http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/customer", true);
         xhttp.send();
     }
+
+    function confirmLogout() {
+        var confirmed = confirm("Are you sure you want to exit?");
+        if (confirmed) {
+            window.location.href = "AdminLogin.jsp";
+        }
+    }
 </script>
 
+</script>
 </body>
 </html>

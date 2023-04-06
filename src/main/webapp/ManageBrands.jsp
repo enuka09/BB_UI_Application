@@ -6,10 +6,11 @@
     <title>Manage Brands</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-        *{
+
+        * {
             margin: 0;
             padding: 0;
             border: none;
@@ -18,10 +19,12 @@
             box-sizing: border-box;
             font-family: "Poppins", sans-serif;
         }
-        body{
+
+        body {
             background: #DBF8F8;
         }
-        .header{
+
+        .header {
             width: 100%;
             margin-top: -10px;
             position: fixed;
@@ -33,7 +36,8 @@
             padding: 20px;
             background: #fff;
         }
-        .logo{
+
+        .logo {
             margin-left: 20px;
             display: flex;
             align-items: center;
@@ -45,20 +49,22 @@
             margin-right: 1rem;
         }
 
-        .search_box{
+        .search_box {
             margin-left: 480px;
             margin-top: -50px;
             display: flex;
             align-items: center;
         }
-        .search_box input{
+
+        .search_box input {
             padding: 9px;
             width: 250px;
             background: #ffffff;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
         }
-        .search_box i{
+
+        .search_box i {
             padding: 0.66rem;
             cursor: pointer;
             color: #fff;
@@ -66,28 +72,33 @@
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
         }
-        .header-icons{
+
+        .header-icons {
             margin-right: 30px;
             display: flex;
             align-items: center;
         }
-        .header-icons i{
+
+        .header-icons i {
             margin-right: 2rem;
             cursor: pointer;
         }
-        .header-icons .account{
+
+        .header-icons .account {
             width: 130px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        .header-icons .account img{
+
+        .header-icons .account img {
             width: 35px;
             height: 35px;
             cursor: pointer;
             border-radius: 50%;
         }
-        .container{
+
+        .container {
             margin-top: 10px;
             display: flex;
             justify-content: space-between;
@@ -107,7 +118,7 @@
             border-radius: 5px;
         }
 
-        .bottom-icon{
+        .bottom-icon {
             margin-top: 150px;
         }
 
@@ -133,7 +144,7 @@
             display: block;
         }
 
-        .selected-icon{
+        .selected-icon {
             color: #ffffff;
             background: #0b9394;
             margin-left: 10px;
@@ -148,7 +159,7 @@
             padding: 6px 4px 6px 12px;
         }
 
-        .control-btn{
+        .control-btn {
             margin-top: 20px;
             margin-left: -10px;
         }
@@ -170,7 +181,7 @@
             background-color: #087576;
         }
 
-        .main-body{
+        .main-body {
             margin-top: 50px;
             margin-left: 265px;
             width: 70%;
@@ -249,7 +260,7 @@
             background-color: #72A400;
         }
 
-        .edit-form{
+        .edit-form {
             width: 400px;
             margin-left: 1080px;
             margin-top: -530px;
@@ -258,18 +269,19 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         }
 
-        .edit-form label{
+        .edit-form label {
             margin-left: 30px;
         }
-        .edit-form input{
+
+        .edit-form input {
             padding-left: 10px;
         }
 
-        .edit-form h2{
+        .edit-form h2 {
             margin-left: 30px;
         }
 
-        .edit-form button{
+        .edit-form button {
             margin-bottom: 30px;
             border-radius: 10px;
             width: 80px;
@@ -279,24 +291,24 @@
             margin-top: 20px;
         }
 
-        .save-btn{
+        .save-btn {
             margin-left: 30px;
             background: #0b9394
         }
 
-        .save-btn:hover{
+        .save-btn:hover {
             background: #087576
         }
 
-        .cancel-btn{
+        .cancel-btn {
             margin-left: 10px;
             background: #ABABAB;
             padding-left: -30px;
         }
-        .cancel-btn:hover{
+
+        .cancel-btn:hover {
             background: #888888;
         }
-
 
 
     </style>
@@ -320,17 +332,22 @@
     <div class="sidebarnew">
         <span style="color: #9DD3D4">Menu</span>
         <a href="AdminDashboard.jsp"><i class='fa fa-home'></i><span style='display:inline-block; margin-left: 10px;'>Home</span></a>
-        <a href="ManageProducts.jsp"><i class='fa-solid fa-bag-shopping'></i><span style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
+        <a href="ManageProducts.jsp"><i class='fa-solid fa-bag-shopping'></i><span
+                style='display:inline-block; margin-left: 10px;'>Manage Products</span></a>
         <div class="selected-icon">
-            <i class='fa-solid fa-ring' style="margin-left: 15px; margin-top: 30px"></i><span style='display:inline-block; margin-left: 10px; margin-top: -100px; color: #ffffff;'>Manage Brands</span>
+            <i class='fa-solid fa-ring' style="margin-left: 15px; margin-top: 30px"></i><span
+                style='display:inline-block; margin-left: 10px; margin-top: -100px; color: #ffffff;'>Manage Brands</span>
         </div>
-        <a href="ManageCategories.jsp"><i class="fa-solid fa-store"></i><span style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
+        <a href="ManageCategories.jsp"><i class="fa-solid fa-store"></i><span
+                style='display:inline-block; margin-left: 10px;'>Manage Category</span></a>
 
-        <a href="ViewUsers.jsp"><i class='fa-solid fa-people-roof'></i><span style='display:inline-block; margin-left: 10px;'>Manage Users</span></a>
+        <a href="ViewUsers.jsp"><i class='fa-solid fa-people-roof'></i><span
+                style='display:inline-block; margin-left: 10px;'>Manage Users</span></a>
 
 
         <div class="bottom-icon">
-            <a href="#profile"><i class="fa-solid fa-right-from-bracket"></i><span style='display:inline-block; margin-left: 10px;'>Logout</span></a>
+            <a href="#" onclick="confirmLogout();"><i class='fa-solid fa-right-from-bracket'></i><span
+                    style='display:inline-block; margin-left: 10px;'>Logout</span></a>
         </div>
     </div>
 </div>
@@ -344,7 +361,7 @@
         <button class="add_brand_btn" onclick="window.location.href = 'AddBrand.jsp'">Add New Brand</button>
 
         <div class="search_box">
-            <input type="text" placeholder="Search Here">
+            <input type="text" placeholder="Search Here" id="searchBox" oninput="searchTable()">
             <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
         </div>
     </div>
@@ -377,7 +394,7 @@
 
     function loadBrand() {
         var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
+        xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var brandData = JSON.parse(this.responseText);
                 var brandTable = document.getElementById("brandTable");
@@ -389,10 +406,10 @@
                     var actionsCell = row.insertCell(2);
                     idCell.innerHTML = brandData[i].id;
                     nameCell.innerHTML = brandData[i].name;
-                    actionsCell.innerHTML = '<button class="edit_brand_btn" data-id="' + brandData[i].id + '">Edit</button> <button class="del_brand_btn" data-id="' + brandData[i].id + '">Delete</button>' ;
+                    actionsCell.innerHTML = '<button class="edit_brand_btn" data-id="' + brandData[i].id + '">Edit</button> <button class="del_brand_btn" data-id="' + brandData[i].id + '">Delete</button>';
                 }
 
-                $(".edit_brand_btn").click(function() {
+                $(".edit_brand_btn").click(function () {
                     var id = $(this).data("id");
                     var name = $(this).closest("tr").find("td:eq(1)").text();
                     $("#brandId").val(id);
@@ -400,20 +417,20 @@
                     $("#editBrandModal").show();
                 });
 
-                $(".del_brand_btn").click(function() {
+                $(".del_brand_btn").click(function () {
                     var id = $(this).data("id");
                     if (confirm("Are you sure you want to Delete this Brand?")) {
                         $.ajax({
                             url: "http://localhost:8080/BB_REST_APP-1.0-SNAPSHOT/api/brands/delete/" + id,
                             type: "DELETE",
-                            success: function() {
+                            success: function () {
                                 // Remove the row from the table
                                 $(this).closest("tr").remove();
                                 // Reload the page
                                 alert("Brand Deleted.");
                                 location.reload();
                             },
-                            error: function() {
+                            error: function () {
                                 alert("Error Deleting Brand.");
                             }
                         });
@@ -425,9 +442,42 @@
         xhttp.send();
     }
 
-    $("#cancelBrandBtn").click(function() {
+    $("#cancelBrandBtn").click(function () {
         $("#editBrandModal").hide();
     });
+
+    function searchTable() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchBox");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("brandTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            var found = false;
+            for (j = 0; j < tr[i].cells.length; j++) {
+                td = tr[i].getElementsByTagName("td")[j];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            if (found) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+
+    function confirmLogout() {
+        var confirmed = confirm("Are you sure you want to exit?");
+        if (confirmed) {
+            window.location.href = "AdminLogin.jsp";
+        }
+    }
 
 </script>
 
